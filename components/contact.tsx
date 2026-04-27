@@ -135,16 +135,54 @@ export function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
 
-                <div className="grid grid-cols-2 gap-3 md:gap-4">
-                  <Input name="firstName" required placeholder="John" value={formData.firstName} onChange={handleChange} className="rounded-xl" />
-                  <Input name="lastName" required placeholder="Doe" value={formData.lastName} onChange={handleChange} className="rounded-xl" />
+                {/* FIXED: mobile now stacks properly */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+                  <Input
+                    name="firstName"
+                    required
+                    placeholder="John"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    className="rounded-xl"
+                  />
+                  <Input
+                    name="lastName"
+                    required
+                    placeholder="Doe"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    className="rounded-xl"
+                  />
                 </div>
 
-                <Input name="email" type="email" required placeholder="john@example.com" value={formData.email} onChange={handleChange} className="rounded-xl" />
+                <Input
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="john@example.com"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="rounded-xl"
+                />
 
-                <Input name="phone" type="tel" required placeholder="(616) 555-0123" value={formData.phone} onChange={handleChange} className="rounded-xl" />
+                <Input
+                  name="phone"
+                  type="tel"
+                  required
+                  placeholder="(616) 555-0123"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="rounded-xl"
+                />
 
-                <Input name="address" required placeholder="123 Main St, Grand Rapids, MI" value={formData.address} onChange={handleChange} className="rounded-xl" />
+                <Input
+                  name="address"
+                  required
+                  placeholder="123 Main St, Grand Rapids, MI"
+                  value={formData.address}
+                  onChange={handleChange}
+                  className="rounded-xl"
+                />
 
                 <Textarea
                   name="details"
