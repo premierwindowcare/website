@@ -7,7 +7,7 @@ export function Services() {
     {
       icon: Sparkles,
       title: "Glass",
-      description: "Crystal-clear glass cleaning inside and out for a flawless finish.",
+      description: "Crystal-clear glass cleaning for a flawless finish.",
     },
     {
       icon: Square,
@@ -51,7 +51,7 @@ export function Services() {
               </h3>
               
               <p className="text-muted-foreground text-lg mb-6 max-w-xl">
-                Between your scheduled services, we&apos;ve got you covered. Enjoy complimentary touch-ups at no extra charge to keep your windows sparkling year-round.
+                See something we missed? Let us know and we&apos;ll return to make it right, with complimentary touch-ups available to keep your windows looking their best year-round.
               </p>
               
               <Button

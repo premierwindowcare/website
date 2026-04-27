@@ -19,8 +19,8 @@ export function WhyUs() {
     },
     {
       icon: ThumbsUp,
-      title: "Satisfaction Guarantee",
-      description: "Not happy? We'll make it right. Your satisfaction is our top priority.",
+      title: "Full Satisfaction Guarantee",
+      description: "You don’t pay until you’re happy with the results. If anything isn’t right, we’ll make it right.",
     },
   ]
 
@@ -55,7 +55,7 @@ export function WhyUs() {
               Why Choose Premier Window Care?
             </h2>
             <p className="text-lg text-muted-foreground mb-10">
-              We&apos;re not just window cleaners — we&apos;re professionals dedicated to delivering exceptional results every time.
+              We&apos;re not just window cleaners — we&apos;re perfectionists dedicated to delivering exceptional results every time.
             </p>
 
             {/* Reasons Grid */}

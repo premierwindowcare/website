@@ -17,7 +17,7 @@ export function Footer() {
               <span className="font-bold text-lg text-white">Premier Window Care</span>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed">
-              Professional window cleaning for homes and businesses across West Michigan.
+              Reliable window cleaning for homes and businesses across West Michigan.
             </p>
           </div>
 

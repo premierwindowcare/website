@@ -10,7 +10,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Premier Window Care | Professional Window Cleaning',
-  description: 'Professional window cleaning for homes and businesses in West Michigan. Crystal clear windows, streak-free guarantee, fully insured.',
+  description: 'Reliable window cleaning for homes and businesses in West Michigan. Crystal clear windows, streak-free guarantee, fully insured.',
   keywords: ['window cleaning', 'West Michigan', 'Grand Rapids', 'Holland', 'professional cleaning', 'residential', 'commercial'],
 }
 

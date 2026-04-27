@@ -43,7 +43,7 @@ export function Hero() {
           </h1>
           
           <p className="text-lg md:text-xl text-white/90 mb-10 animate-fade-in-up animation-delay-200 text-pretty">
-            Professional window cleaning for homes and businesses. Fast, streak-free, and reliable.
+            Reliable window cleaning for homes and businesses. Fast, streak-free results from a hardworking local team you can trust.
           </p>
 
           {/* CTA Buttons */}

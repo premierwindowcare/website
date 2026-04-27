@@ -2,14 +2,14 @@ import { MapPin } from "lucide-react"
 
 export function ServiceArea() {
   const cities = [
+    "Hudsonville",
     "Grand Rapids",
-    "Holland",
-    "Zeeland",
-    "Grandville",
-    "Jenison",
     "Wyoming",
     "Kentwood",
-    "Walker",
+    "Grandville",
+    "Jenison",
+    "Holland",
+    "Grand Haven"
   ]
 
   return (
