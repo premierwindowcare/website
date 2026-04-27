@@ -62,10 +62,11 @@ export function Contact() {
       <div className="absolute bottom-0 left-0 w-56 md:w-72 h-56 md:h-72 bg-blue-pale/15 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-center">
+
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
 
           {/* LEFT SIDE */}
-          <div className="w-full">
+          <div className="w-full mt-1 lg:mt-8">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
               Request Your Free Quote Now
             </h2>
@@ -77,7 +78,7 @@ export function Contact() {
             <div className="flex flex-col sm:flex-row lg:flex-col gap-3 sm:gap-4">
               <a
                 href="tel:6164224749"
-                className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 border border-white/20 transition-colors hover:bg-white/20 flex-1 lg:flex-none"
+                className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 border border-white/20 hover:bg-white/20 transition-colors"
               >
                 <div className="w-11 h-11 rounded-full bg-blue-light/30 flex items-center justify-center">
                   <Phone className="w-5 h-5 text-blue-pale" />
@@ -90,7 +91,7 @@ export function Contact() {
 
               <a
                 href="mailto:info@cleanwithpremier.com"
-                className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 border border-white/20 transition-colors hover:bg-white/20 flex-1 lg:flex-none"
+                className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 border border-white/20 hover:bg-white/20 transition-colors"
               >
                 <div className="w-11 h-11 rounded-full bg-blue-light/30 flex items-center justify-center">
                   <Mail className="w-5 h-5 text-blue-pale" />
@@ -133,64 +134,95 @@ export function Contact() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5">
 
-                {/* FIXED: mobile now stacks properly */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+                {/* First + Last Name */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-900 mb-1">
+                      First Name
+                    </label>
+                    <Input
+                      name="firstName"
+                      required
+                      placeholder="John"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className="rounded-xl"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-900 mb-1">
+                      Last Name
+                    </label>
+                    <Input
+                      name="lastName"
+                      required
+                      placeholder="Doe"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className="rounded-xl"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-900 mb-1">
+                    Email
+                  </label>
                   <Input
-                    name="firstName"
+                    name="email"
+                    type="email"
                     required
-                    placeholder="John"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    className="rounded-xl"
-                  />
-                  <Input
-                    name="lastName"
-                    required
-                    placeholder="Doe"
-                    value={formData.lastName}
+                    placeholder="john@example.com"
+                    value={formData.email}
                     onChange={handleChange}
                     className="rounded-xl"
                   />
                 </div>
 
-                <Input
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="john@example.com"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="rounded-xl"
-                />
+                <div>
+                  <label className="block text-sm font-semibold text-gray-900 mb-1">
+                    Phone
+                  </label>
+                  <Input
+                    name="phone"
+                    type="tel"
+                    required
+                    placeholder="(616) 555-0123"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="rounded-xl"
+                  />
+                </div>
 
-                <Input
-                  name="phone"
-                  type="tel"
-                  required
-                  placeholder="(616) 555-0123"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="rounded-xl"
-                />
+                <div>
+                  <label className="block text-sm font-semibold text-gray-900 mb-1">
+                    Address
+                  </label>
+                  <Input
+                    name="address"
+                    required
+                    placeholder="123 Main St, Grand Rapids, MI"
+                    value={formData.address}
+                    onChange={handleChange}
+                    className="rounded-xl"
+                  />
+                </div>
 
-                <Input
-                  name="address"
-                  required
-                  placeholder="123 Main St, Grand Rapids, MI"
-                  value={formData.address}
-                  onChange={handleChange}
-                  className="rounded-xl"
-                />
-
-                <Textarea
-                  name="details"
-                  placeholder="Tell us about your windows..."
-                  value={formData.details}
-                  onChange={handleChange}
-                  className="rounded-xl min-h-[100px]"
-                />
+                <div>
+                  <label className="block text-sm font-semibold text-gray-900 mb-1">
+                    Additional Details
+                  </label>
+                  <Textarea
+                    name="details"
+                    placeholder="Tell us about your windows, property type, or any special requirements..."
+                    value={formData.details}
+                    onChange={handleChange}
+                    className="rounded-xl min-h-[100px]"
+                  />
+                </div>
 
                 <Button
                   type="submit"
