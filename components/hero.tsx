@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Shield, Sparkles, ThumbsUp } from "lucide-react"
@@ -11,15 +13,27 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[95vh] flex items-center pt-36 pb-28 overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-deep via-blue-primary to-blue-bright" />
       
+      {/* 🎥 Background Video (LOOPING) */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/reflekt_reel-2.mp4" type="video/mp4" />
+      </video>
+
+      {/* 🔵 Overlay (keeps text readable) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-deep/80 via-blue-primary/70 to-blue-deep/80" />
+
       {/* Decorative Shapes */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-blue-light/30 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-pale/20 rounded-full blur-3xl animate-float-slow animation-delay-2000" />
       <div className="absolute top-1/2 right-1/4 w-48 h-48 bg-blue-sky/20 rounded-full blur-2xl animate-float animation-delay-1000" />
       
-      {/* Wave Divider at Bottom */}
+      {/* Wave Divider */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg
           viewBox="0 0 1440 120"
@@ -35,9 +49,10 @@ export function Hero() {
         </svg>
       </div>
 
+      {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Main Content */}
+          
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in-up text-balance">
             Crystal Clear Windows Without the Hassle
           </h1>
@@ -46,7 +61,6 @@ export function Hero() {
             Reliable window cleaning for homes and businesses. Fast, streak-free results from a hardworking local team you can trust.
           </p>
 
-          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14 animate-fade-in-up animation-delay-400">
             <Button
               asChild
@@ -71,6 +85,7 @@ export function Hero() {
               </div>
             ))}
           </div>
+
         </div>
       </div>
     </section>
