@@ -136,6 +136,12 @@ export function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
 
+                <input
+                  type="text"
+                  name="_gotcha"
+                  style={{ display: "none" }}
+                />
+
                 {/* First + Last Name */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
