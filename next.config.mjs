@@ -1,17 +1,9 @@
 /** @type {import('next').NextConfig} */
-
-const repoName = "website"
-
 const nextConfig = {
-  output: "export",
-  distDir: "dist",
+  output: 'export', // required for static export (GitHub Pages)
   images: {
-    unoptimized: true,
+    unoptimized: true, // required for static export
   },
+};
 
-  // 🔥 REQUIRED for GitHub Pages project repo hosting
-  basePath: process.env.NODE_ENV === "production" ? `/${repoName}` : "",
-  assetPrefix: process.env.NODE_ENV === "production" ? `/${repoName}/` : "",
-}
-
-export default nextConfig
+module.exports = nextConfig;
