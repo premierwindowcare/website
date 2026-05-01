@@ -41,7 +41,7 @@ export function WhyUs() {
             <div className="aspect-square max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border-0 relative">
               
               <Image
-                src="/high_window.jpg"
+                src="/website/high_window.jpg"
                 alt="Professional window cleaning"
                 fill
                 className="object-cover object-center"
