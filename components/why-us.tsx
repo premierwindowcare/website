@@ -38,7 +38,7 @@ export function WhyUs() {
           
           {/* Left - Image */}
           <div className="relative">
-            <div className="aspect-square max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border-0 relative translate-x-6">
+            <div className="aspect-square max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border-0 relative lg:translate-x-6">
               
               <Image
                 src="/website/high_window.jpg"

@@ -17,7 +17,7 @@ export function Services() {
       icon: Square,
       title: "Frames",
       description:
-        "Detailed frame wiping to remove dust and buildup for a polished look.",
+        "Detailed frame cleaning to remove dust and buildup for a polished look.",
       image: "/website/frame.jpg",
     },
     {
