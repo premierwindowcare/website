@@ -8,6 +8,12 @@ const inter = Inter({
   variable: "--font-inter"
 })
 
+export const metadata = {
+  icons: {
+    icon: "/premier-06.png",
+  },
+}
+
 export const metadata: Metadata = {
   title: 'Premier Window Care | Reliable Window Cleaning',
   description: 'Reliable window cleaning for homes and businesses in West Michigan. Crystal clear windows, streak-free guarantee, fully insured.',
