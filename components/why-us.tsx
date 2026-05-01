@@ -37,9 +37,9 @@ export function WhyUs() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Left - Image */}
-          <div className="relative">
-            <div className="aspect-square max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border-0 relative lg:translate-x-6">
-              
+          <div className="relative flex justify-start lg:pl-6">
+            <div className="aspect-square max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border-0 relative">
+
               <Image
                 src="/website/high_window.jpg"
                 alt="Professional window cleaning"
