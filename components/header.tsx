@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -20,12 +21,18 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20 md:h-24">
+          
+
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-blue-primary to-blue-sky flex items-center justify-center">
-              <span className="text-white font-bold text-xl">P</span>
-            </div>
-            <span className="font-bold text-lg text-blue-deep hidden sm:block">Premier Window Care</span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/premier-03.png"
+              alt="Premier Window Care"
+              width={220}
+              height={60}
+              priority
+              className="h-10 md:h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

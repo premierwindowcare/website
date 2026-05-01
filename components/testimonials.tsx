@@ -3,21 +3,21 @@ import { Star } from "lucide-react"
 export function Testimonials() {
   const testimonials = [
     {
-      name: "Sarah M.",
-      location: "Grand Rapids, MI",
-      quote: "Premier Window Care did an amazing job on our home. The windows have never looked better, and the team was so professional and friendly!",
+      name: "",
+      location: "",
+      quote: "Coming Soon...",
       rating: 5,
     },
     {
-      name: "James T.",
-      location: "Holland, MI",
-      quote: "We use them for our office building quarterly. Always on time, always thorough, and the complimentary touch-ups are a game changer.",
+      name: "",
+      location: "",
+      quote: "Coming Soon...",
       rating: 5,
     },
     {
-      name: "Linda K.",
-      location: "Zeeland, MI",
-      quote: "I was impressed by their attention to detail. They cleaned the frames and sills too — my windows look brand new!",
+      name: "",
+      location: "",
+      quote: "Coming Soon...",
       rating: 5,
     },
   ]

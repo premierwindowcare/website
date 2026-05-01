@@ -22,7 +22,7 @@ export function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        {/* <source src="/website/reflekt_reel-2.mp4" type="video/mp4" /> */}
+        <source src="/website/man-cleaning-building-windows.mp4" type="video/mp4" />
       </video>
 
       {/* 🔵 Overlay (keeps text readable) */}

@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link"
+import Image from "next/image"
 import { Phone, Mail } from "lucide-react"
 
 export function Footer() {
@@ -8,15 +11,21 @@ export function Footer() {
     <footer className="bg-blue-deep py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
+          
           {/* Brand */}
-          <div>
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-sky to-blue-light flex items-center justify-center">
-                <span className="text-blue-deep font-bold text-lg">P</span>
-              </div>
-              <span className="font-bold text-lg text-white">Premier Window Care</span>
+          <div className="flex flex-col items-start text-left">
+            <Link href="/" className="mb-4 -ml-2 md:-ml-3">
+              <Image
+                src="/premierwhite.png"
+                alt="Premier Window Care"
+                width={260}
+                height={80}
+                className="h-14 w-auto"
+                priority
+              />
             </Link>
-            <p className="text-white/70 text-sm leading-relaxed">
+
+            <p className="text-white/70 text-sm leading-relaxed max-w-xs">
               Reliable window cleaning for homes and businesses across West Michigan.
             </p>
           </div>
