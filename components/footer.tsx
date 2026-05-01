@@ -16,7 +16,7 @@ export function Footer() {
           <div className="flex flex-col items-start text-left">
             <Link href="/" className="mb-4 -ml-2 md:-ml-3">
               <Image
-                src="/premierwhite.png"
+                src="/website/premierwhite.png"
                 alt="Premier Window Care"
                 width={260}
                 height={80}

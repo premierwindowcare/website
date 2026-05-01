@@ -11,21 +11,21 @@ export function Services() {
       icon: Sparkles,
       title: "Glass",
       description: "Crystal-clear glass cleaning for a flawless finish.",
-      image: "/window.jpg",
+      image: "/website/window.jpg",
     },
     {
       icon: Square,
       title: "Frames",
       description:
         "Detailed frame wiping to remove dust and buildup for a polished look.",
-      image: "/frame.jpg",
+      image: "/website/frame.jpg",
     },
     {
       icon: Layers,
       title: "Sills",
       description:
         "Thorough sill cleaning to eliminate dirt and leave everything spotless.",
-      image: "/sill.jpg",
+      image: "/website/sill.jpg",
     },
   ]
 

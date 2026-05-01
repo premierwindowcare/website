@@ -26,7 +26,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/premier-03.png"
+              src="/website/premier-03.png"
               alt="Premier Window Care"
               width={220}
               height={60}
