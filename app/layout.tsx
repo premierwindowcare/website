@@ -9,7 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Premier Window Care | Reliable Window Cleaning',
+  title: 'Premier Window Care | Window Cleaning in Hudsonville, MI',
   description:
     'Reliable window cleaning for homes and businesses in West Michigan. Crystal clear windows, streak-free guarantee, fully insured.',
   icons: {
