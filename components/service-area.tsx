@@ -13,7 +13,7 @@ export function ServiceArea() {
   ]
 
   return (
-    <section id="service-area" className="py-16 md:py-24 bg-blue-soft">
+    <section id="service-area" className="scroll-mt-28 py-16 md:py-24 bg-blue-soft">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-12">

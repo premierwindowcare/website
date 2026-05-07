@@ -32,7 +32,7 @@ export function WhyUs() {
   ]
 
   return (
-    <section id="why-us" className="py-20 md:py-28 bg-blue-soft">
+    <section id="why-us" className="scroll-mt-28 py-20 md:py-28 bg-blue-soft">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           

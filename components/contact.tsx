@@ -55,7 +55,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="py-16 md:py-24 bg-gradient-to-br from-blue-primary via-blue-bright to-blue-sky relative overflow-hidden"
+      className="scroll-mt-28 py-16 md:py-24 bg-gradient-to-br from-blue-primary via-blue-bright to-blue-sky relative overflow-hidden"
     >
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-72 md:w-96 h-72 md:h-96 bg-blue-light/20 rounded-full blur-3xl" />

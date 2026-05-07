@@ -1,8 +1,8 @@
 "use client"
 
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Shield, Sparkles, ThumbsUp } from "lucide-react"
+import { HashLink } from "@/components/hash-link"
 
 export function Hero() {
   const trustBadges = [
@@ -67,7 +67,7 @@ export function Hero() {
               size="lg"
               className="rounded-full bg-white hover:bg-blue-soft text-blue-primary px-8 py-6 text-lg shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
             >
-              <Link href="#contact">Get a Free Quote</Link>
+              <HashLink href="#contact">Get a Free Quote</HashLink>
             </Button>
           </div>
 

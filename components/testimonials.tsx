@@ -23,7 +23,7 @@ export function Testimonials() {
   ]
 
   return (
-    <section id="testimonials" className="py-20 md:py-28 bg-white">
+    <section id="testimonials" className="scroll-mt-28 py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">

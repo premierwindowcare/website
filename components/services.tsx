@@ -1,9 +1,9 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles, Square, Layers } from "lucide-react"
+import { HashLink } from "@/components/hash-link"
 
 export function Services() {
   const services = [
@@ -30,7 +30,7 @@ export function Services() {
   ]
 
   return (
-    <section id="services" className="py-12 md:py-20 bg-blue-soft">
+    <section id="services" className="scroll-mt-28 py-12 md:py-20 bg-blue-soft">
       <div className="container mx-auto px-4">
 
         {/* Section Header */}
@@ -68,10 +68,10 @@ export function Services() {
                 asChild
                 className="rounded-full bg-blue-primary hover:bg-blue-sky text-white group"
               >
-                <Link href="#contact">
+                <HashLink href="#contact">
                   Get a Quote
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                </Link>
+                </HashLink>
               </Button>
             </div>
           </div>

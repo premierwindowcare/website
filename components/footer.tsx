@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Phone, Mail } from "lucide-react"
+import { HashLink } from "@/components/hash-link"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -34,21 +35,21 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Quick Links</h4>
             <nav className="flex flex-col gap-2">
-              <Link href="#services" className="text-white/70 hover:text-white transition-colors text-sm">
+              <HashLink href="#services" className="text-white/70 hover:text-white transition-colors text-sm">
                 Services
-              </Link>
-              <Link href="#why-us" className="text-white/70 hover:text-white transition-colors text-sm">
+              </HashLink>
+              <HashLink href="#why-us" className="text-white/70 hover:text-white transition-colors text-sm">
                 Why Us
-              </Link>
-              <Link href="#testimonials" className="text-white/70 hover:text-white transition-colors text-sm">
+              </HashLink>
+              <HashLink href="#testimonials" className="text-white/70 hover:text-white transition-colors text-sm">
                 Testimonials
-              </Link>
-              <Link href="#service-area" className="text-white/70 hover:text-white transition-colors text-sm">
+              </HashLink>
+              <HashLink href="#service-area" className="text-white/70 hover:text-white transition-colors text-sm">
                 Service Area
-              </Link>
-              <Link href="#contact" className="text-white/70 hover:text-white transition-colors text-sm">
+              </HashLink>
+              <HashLink href="#contact" className="text-white/70 hover:text-white transition-colors text-sm">
                 Contact
-              </Link>
+              </HashLink>
             </nav>
           </div>
 
