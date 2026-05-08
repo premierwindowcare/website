@@ -3,9 +3,9 @@ import { Star } from "lucide-react"
 export function Testimonials() {
   const testimonials = [
     {
-      name: "",
-      location: "",
-      quote: "Coming Soon...",
+      name: "Darcy Briseno",
+      location: "Jenison, MI",
+      quote: "Josiah and Drew did a wonderful job washing my windows! They saved me so much time and did a thorough job. I will definitely use them again next time!",
       rating: 5,
     },
     {
