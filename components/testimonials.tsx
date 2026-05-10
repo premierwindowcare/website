@@ -9,9 +9,9 @@ export function Testimonials() {
       rating: 5,
     },
     {
-      name: "",
+      name: "Isaiah Murphy",
       location: "",
-      quote: "Coming Soon...",
+      quote: "Great job highly recommend!",
       rating: 5,
     },
     {
