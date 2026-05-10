@@ -10,7 +10,7 @@ export function Testimonials() {
     },
     {
       name: "Isaiah Murphy",
-      location: "",
+      location: "Holland, MI",
       quote: "Great job highly recommend!",
       rating: 5,
     },
