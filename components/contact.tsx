@@ -18,7 +18,6 @@ export function Contact() {
 
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [errorMessage, setErrorMessage] = useState("")
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -29,52 +28,34 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-    setErrorMessage("")
 
     try {
-      const form = e.currentTarget as HTMLFormElement
-      const payload = new FormData(form)
-
       const response = await fetch("https://formspree.io/f/xrervkpg", {
         method: "POST",
         headers: {
+          "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: payload,
+        body: JSON.stringify(formData),
       })
 
-      const result = await response.json().catch(() => null)
+      setLoading(false)
 
       if (response.ok) {
         setSubmitted(true)
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          address: "",
-          details: "",
-        })
-        form.reset()
       } else {
-        const nextMessage =
-          result?.errors?.[0]?.message ||
-          result?.error ||
-          "Something went wrong. Please try again."
-
-        setErrorMessage(nextMessage)
+        alert("Something went wrong. Please try again.")
       }
-    } catch {
-      setErrorMessage("Network error. Please try again.")
-    } finally {
+    } catch (error) {
       setLoading(false)
+      alert("Network error. Please try again.")
     }
   }
 
   return (
     <section
       id="contact"
-      className="scroll-mt-28 py-16 md:py-24 bg-gradient-to-br from-blue-primary via-blue-bright to-blue-sky relative overflow-hidden"
+      className="py-16 md:py-24 bg-gradient-to-br from-blue-primary via-blue-bright to-blue-sky relative overflow-hidden"
     >
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-72 md:w-96 h-72 md:h-96 bg-blue-light/20 rounded-full blur-3xl" />
@@ -154,12 +135,6 @@ export function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
-
-                <input
-                  type="text"
-                  name="_gotcha"
-                  style={{ display: "none" }}
-                />
 
                 {/* First + Last Name */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -257,10 +232,6 @@ export function Contact() {
                   {loading ? "Sending..." : "Request My Quote"}
                   <Send className="w-5 h-5 ml-2" />
                 </Button>
-
-                {errorMessage ? (
-                  <p className="text-sm text-red-600">{errorMessage}</p>
-                ) : null}
 
               </form>
             )}
