@@ -18,6 +18,7 @@ export function Contact() {
 
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -28,27 +29,45 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
+    setErrorMessage("")
 
     try {
+      const form = e.currentTarget as HTMLFormElement
+      const payload = new FormData(form)
+
       const response = await fetch("https://formspree.io/f/xrervkpg", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(formData),
+        body: payload,
       })
 
-      setLoading(false)
+      const result = await response.json().catch(() => null)
 
       if (response.ok) {
         setSubmitted(true)
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          address: "",
+          details: "",
+        })
+        form.reset()
       } else {
-        alert("Something went wrong. Please try again.")
+        const nextMessage =
+          result?.errors?.[0]?.message ||
+          result?.error ||
+          "Something went wrong. Please try again."
+
+        setErrorMessage(nextMessage)
       }
-    } catch (error) {
+    } catch {
+      setErrorMessage("Network error. Please try again.")
+    } finally {
       setLoading(false)
-      alert("Network error. Please try again.")
     }
   }
 
@@ -238,6 +257,10 @@ export function Contact() {
                   {loading ? "Sending..." : "Request My Quote"}
                   <Send className="w-5 h-5 ml-2" />
                 </Button>
+
+                {errorMessage ? (
+                  <p className="text-sm text-red-600">{errorMessage}</p>
+                ) : null}
 
               </form>
             )}
