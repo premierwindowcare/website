@@ -9,15 +9,15 @@ export function Testimonials() {
       rating: 5,
     },
     {
-      name: "Isaiah Murphy",
-      location: "Holland, MI",
-      quote: "Great job highly recommend!",
+      name: "Amanda Elliott",
+      location: "Hudsonville, MI",
+      quote: "Did a great job! My windows look great!",
       rating: 5,
     },
     {
-      name: "",
-      location: "",
-      quote: "Coming Soon...",
+      name: "Jack Meyer",
+      location: "Hudsonville, MI",
+      quote: "5 stars. Drew is the man. Young guys are very professional, fair price, good work. Highly recommend.",
       rating: 5,
     },
   ]
