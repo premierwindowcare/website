@@ -13,26 +13,30 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[95vh] flex items-center pt-36 pb-28 overflow-hidden">
-      
-      {/* 🎥 Background Video (LOOPING) */}
+
+      {/* 🎥 Background Video */}
       <video
         autoPlay
         muted
         loop
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/man-cleaning-building-windows.mp4" type="video/mp4" />
+        <source
+          src="/website_video_compressed.mp4"
+          type="video/mp4"
+        />
       </video>
 
-      {/* 🔵 Overlay (keeps text readable) */}
+      {/* 🔵 Dark Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-deep/80 via-blue-primary/70 to-blue-deep/80" />
 
       {/* Decorative Shapes */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-blue-light/30 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-pale/20 rounded-full blur-3xl animate-float-slow animation-delay-2000" />
       <div className="absolute top-1/2 right-1/4 w-48 h-48 bg-blue-sky/20 rounded-full blur-2xl animate-float animation-delay-1000" />
-      
+
       {/* Wave Divider */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg
@@ -52,11 +56,11 @@ export function Hero() {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          
+
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in-up text-balance">
             Crystal Clear Windows Without the Hassle
           </h1>
-          
+
           <p className="text-lg md:text-xl text-white/90 mb-10 animate-fade-in-up animation-delay-200 text-pretty">
             Reliable window cleaning for homes and businesses. Fast, streak-free results from a hardworking local team you can trust.
           </p>
@@ -67,7 +71,9 @@ export function Hero() {
               size="lg"
               className="rounded-full bg-white hover:bg-blue-soft text-blue-primary px-8 py-6 text-lg shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
             >
-              <HashLink href="#contact">Get a Free Quote</HashLink>
+              <HashLink href="#contact">
+                Get a Free Quote
+              </HashLink>
             </Button>
           </div>
 
@@ -79,6 +85,7 @@ export function Hero() {
                 className="flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-5 py-3 border border-white/25"
               >
                 <badge.icon className="w-5 h-5 text-blue-pale" />
+
                 <span className="text-sm text-white font-medium">
                   {badge.label}
                 </span>
