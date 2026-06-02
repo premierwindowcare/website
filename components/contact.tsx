@@ -116,7 +116,7 @@ export function Contact() {
                   Form Submitted
                 </h3>
                 <p className="text-muted-foreground">
-                  Thanks for reaching out — we’ll get back to you shortly.
+                  Thanks for reaching out, we’ll get back to you shortly.
                 </p>
               </div>
             ) : (
@@ -203,9 +203,6 @@ export function Contact() {
                     onChange={handleChange}
                     className="rounded-xl"
                   />
-                  <p className="text-xs text-gray-500 mt-1">
-                    Start typing your address. You can also enter it manually if it doesn't autofill.
-                  </p>
                 </div>
 
                 {/* DETAILS */}
