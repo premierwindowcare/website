@@ -1,15 +1,10 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, Send } from "lucide-react"
-
-type AddressSuggestion = {
-  place_id: number
-  display_name: string
-}
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -24,82 +19,14 @@ export function Contact() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  const [addressQuery, setAddressQuery] = useState("")
-  const [addressSuggestions, setAddressSuggestions] = useState<
-    AddressSuggestion[]
-  >([])
-  const [showSuggestions, setShowSuggestions] = useState(false)
-
-  const addressWrapperRef = useRef<HTMLDivElement>(null)
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
   }
-
-  const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-
-    setFormData((prev) => ({
-      ...prev,
-      address: value,
-    }))
-
-    setAddressQuery(value)
-  }
-
-  const searchAddresses = async (query: string) => {
-    if (query.length < 3) {
-      setAddressSuggestions([])
-      return
-    }
-
-    try {
-      const response = await fetch(
-        `https://nominatim.openstreetmap.org/search?format=jsonv2&q=${encodeURIComponent(
-          query
-        )}&countrycodes=us&limit=5`
-      )
-
-      const results = await response.json()
-
-      setAddressSuggestions(results)
-      setShowSuggestions(results.length > 0)
-    } catch (error) {
-      console.error("Address lookup failed:", error)
-    }
-  }
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (addressQuery.length >= 3) {
-        searchAddresses(addressQuery)
-      } else {
-        setAddressSuggestions([])
-        setShowSuggestions(false)
-      }
-    }, 300)
-
-    return () => clearTimeout(timeout)
-  }, [addressQuery])
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        addressWrapperRef.current &&
-        !addressWrapperRef.current.contains(event.target as Node)
-      ) {
-        setShowSuggestions(false)
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside)
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -185,26 +112,11 @@ export function Contact() {
 
             {submitted ? (
               <div className="text-center py-10">
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
-                    <svg
-                      className="w-8 h-8 text-green-600"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                </div>
-
-                <h3 className="text-2xl font-semibold text-foreground mb-2">
+                <h3 className="text-2xl font-semibold mb-2">
                   Form Submitted
                 </h3>
-
                 <p className="text-muted-foreground">
-                  Thanks for reaching out — we'll get back to you shortly.
+                  Thanks for reaching out — we’ll get back to you shortly.
                 </p>
               </div>
             ) : (
@@ -213,13 +125,14 @@ export function Contact() {
                 {/* NAME */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-1">
+                    <label className="block text-sm font-semibold mb-1">
                       First Name
                     </label>
                     <Input
                       name="firstName"
                       required
                       autoComplete="given-name"
+                      placeholder="John"
                       value={formData.firstName}
                       onChange={handleChange}
                       className="rounded-xl"
@@ -227,13 +140,14 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-1">
+                    <label className="block text-sm font-semibold mb-1">
                       Last Name
                     </label>
                     <Input
                       name="lastName"
                       required
                       autoComplete="family-name"
+                      placeholder="Doe"
                       value={formData.lastName}
                       onChange={handleChange}
                       className="rounded-xl"
@@ -243,7 +157,7 @@ export function Contact() {
 
                 {/* EMAIL */}
                 <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-1">
+                  <label className="block text-sm font-semibold mb-1">
                     Email
                   </label>
                   <Input
@@ -251,6 +165,7 @@ export function Contact() {
                     type="email"
                     required
                     autoComplete="email"
+                    placeholder="john@example.com"
                     value={formData.email}
                     onChange={handleChange}
                     className="rounded-xl"
@@ -259,7 +174,7 @@ export function Contact() {
 
                 {/* PHONE */}
                 <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-1">
+                  <label className="block text-sm font-semibold mb-1">
                     Phone
                   </label>
                   <Input
@@ -267,57 +182,40 @@ export function Contact() {
                     type="tel"
                     required
                     autoComplete="tel"
+                    placeholder="(616) 555-0123"
                     value={formData.phone}
                     onChange={handleChange}
                     className="rounded-xl"
                   />
                 </div>
 
-                {/* ADDRESS AUTOCOMPLETE */}
-                <div ref={addressWrapperRef} className="relative">
-                  <label className="block text-sm font-semibold text-gray-900 mb-1">
+                {/* ADDRESS (RESTORED SIMPLE VERSION) */}
+                <div>
+                  <label className="block text-sm font-semibold mb-1">
                     Address
                   </label>
-
                   <Input
                     name="address"
                     required
                     autoComplete="street-address"
-                    placeholder="Start typing your address..."
+                    placeholder="123 Main St, Grand Rapids, MI"
                     value={formData.address}
-                    onChange={handleAddressChange}
+                    onChange={handleChange}
                     className="rounded-xl"
                   />
-
-                  {showSuggestions && addressSuggestions.length > 0 && (
-                    <div className="absolute z-50 mt-1 w-full overflow-hidden rounded-xl border bg-white shadow-lg">
-                      {addressSuggestions.map((s) => (
-                        <button
-                          key={s.place_id}
-                          type="button"
-                          onClick={() => {
-                            setFormData((prev) => ({
-                              ...prev,
-                              address: s.display_name,
-                            }))
-                            setShowSuggestions(false)
-                          }}
-                          className="block w-full border-b px-4 py-3 text-left text-sm hover:bg-gray-100 last:border-b-0"
-                        >
-                          {s.display_name}
-                        </button>
-                      ))}
-                    </div>
-                  )}
+                  <p className="text-xs text-gray-500 mt-1">
+                    Start typing your address. You can also enter it manually if it doesn't autofill.
+                  </p>
                 </div>
 
                 {/* DETAILS */}
                 <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-1">
+                  <label className="block text-sm font-semibold mb-1">
                     Additional Details
                   </label>
                   <Textarea
                     name="details"
+                    placeholder="Tell us about your windows, property type, or any special requirements..."
                     value={formData.details}
                     onChange={handleChange}
                     className="rounded-xl min-h-[100px]"
