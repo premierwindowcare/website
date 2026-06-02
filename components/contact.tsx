@@ -60,6 +60,7 @@ export function Contact() {
       id="contact"
       className="py-16 md:py-24 bg-gradient-to-br from-blue-primary via-blue-bright to-blue-sky relative overflow-hidden"
     >
+      {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-72 md:w-96 h-72 md:h-96 bg-blue-light/20 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-56 md:w-72 h-56 md:h-72 bg-blue-pale/15 rounded-full blur-3xl" />
 
@@ -112,26 +113,39 @@ export function Contact() {
 
             {submitted ? (
               <div className="text-center py-10">
-                <h3 className="text-2xl font-semibold mb-2">
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
+                    <svg
+                      className="w-8 h-8 text-green-600"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-semibold text-foreground mb-2">
                   Form Submitted
                 </h3>
+
                 <p className="text-muted-foreground">
-                  Thanks for reaching out, we’ll get back to you shortly.
+                  Thanks for reaching out — we’ll get back to you shortly.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
 
-                {/* NAME */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold mb-1">
+                    <label className="block text-sm font-semibold text-gray-900 mb-1">
                       First Name
                     </label>
                     <Input
                       name="firstName"
                       required
-                      autoComplete="given-name"
                       placeholder="John"
                       value={formData.firstName}
                       onChange={handleChange}
@@ -140,13 +154,12 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold mb-1">
+                    <label className="block text-sm font-semibold text-gray-900 mb-1">
                       Last Name
                     </label>
                     <Input
                       name="lastName"
                       required
-                      autoComplete="family-name"
                       placeholder="Doe"
                       value={formData.lastName}
                       onChange={handleChange}
@@ -155,16 +168,14 @@ export function Contact() {
                   </div>
                 </div>
 
-                {/* EMAIL */}
                 <div>
-                  <label className="block text-sm font-semibold mb-1">
+                  <label className="block text-sm font-semibold text-gray-900 mb-1">
                     Email
                   </label>
                   <Input
                     name="email"
                     type="email"
                     required
-                    autoComplete="email"
                     placeholder="john@example.com"
                     value={formData.email}
                     onChange={handleChange}
@@ -172,16 +183,14 @@ export function Contact() {
                   />
                 </div>
 
-                {/* PHONE */}
                 <div>
-                  <label className="block text-sm font-semibold mb-1">
+                  <label className="block text-sm font-semibold text-gray-900 mb-1">
                     Phone
                   </label>
                   <Input
                     name="phone"
                     type="tel"
                     required
-                    autoComplete="tel"
                     placeholder="(616) 555-0123"
                     value={formData.phone}
                     onChange={handleChange}
@@ -189,15 +198,13 @@ export function Contact() {
                   />
                 </div>
 
-                {/* ADDRESS (RESTORED SIMPLE VERSION) */}
                 <div>
-                  <label className="block text-sm font-semibold mb-1">
+                  <label className="block text-sm font-semibold text-gray-900 mb-1">
                     Address
                   </label>
                   <Input
                     name="address"
                     required
-                    autoComplete="street-address"
                     placeholder="123 Main St, Grand Rapids, MI"
                     value={formData.address}
                     onChange={handleChange}
@@ -205,9 +212,8 @@ export function Contact() {
                   />
                 </div>
 
-                {/* DETAILS */}
                 <div>
-                  <label className="block text-sm font-semibold mb-1">
+                  <label className="block text-sm font-semibold text-gray-900 mb-1">
                     Additional Details
                   </label>
                   <Textarea
@@ -219,18 +225,18 @@ export function Contact() {
                   />
                 </div>
 
-                {/* SUBMIT */}
                 <Button
                   type="submit"
                   disabled={loading}
                   className="w-full rounded-full bg-blue-primary hover:bg-blue-sky text-white py-5 md:py-6 text-base md:text-lg font-semibold"
                 >
                   {loading ? "Sending..." : "Request My Quote"}
-                  <Send className="ml-2 h-5 w-5" />
+                  <Send className="w-5 h-5 ml-2" />
                 </Button>
 
               </form>
             )}
+
           </div>
         </div>
       </div>
