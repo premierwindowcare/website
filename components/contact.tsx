@@ -13,6 +13,7 @@ export function Contact() {
     email: "",
     phone: "",
     address: "",
+    leadSource: "",
     details: "",
   })
 
@@ -20,7 +21,7 @@ export function Contact() {
   const [loading, setLoading] = useState(false)
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setFormData({
       ...formData,
@@ -210,6 +211,33 @@ export function Contact() {
                     onChange={handleChange}
                     className="rounded-xl"
                   />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-900 mb-1">
+                    How did you hear about us?
+                  </label>
+                  <select
+                    name="leadSource"
+                    required
+                    value={formData.leadSource}
+                    onChange={handleChange}
+                    className="border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 aria-invalid:border-destructive flex h-9 w-full rounded-xl border bg-transparent px-3 py-1 text-base text-gray-900 shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                  >
+                    <option value="" disabled>
+                      Select a source
+                    </option>
+                    <option value="Google">Google</option>
+                    <option value="AI">AI</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Website">Website</option>
+                    <option value="Friends or Family">Friends or Family</option>
+                    <option value="Neighbor">Neighbor</option>
+                    <option value="Yard Sign">Yard Sign</option>
+                    <option value="Repeat Customer">Repeat Customer</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
 
                 <div>
