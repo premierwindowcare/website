@@ -1,6 +1,7 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /doorhanger
 
 # Host
 Host: https://cleanwithpremier.com

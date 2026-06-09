@@ -4,6 +4,16 @@ module.exports = {
   generateRobotsTxt: true,
   changefreq: 'weekly',
   priority: 0.7,
+  exclude: ['/doorhanger'],
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/doorhanger'],
+      },
+    ],
+  },
   additionalPaths: async (config) => {
     const homepageSections = [
       '/#services',
