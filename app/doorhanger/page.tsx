@@ -35,14 +35,7 @@ export default function DoorhangerRedirect() {
               window.dataLayer = window.dataLayer || [];
               window.gtag = function () { window.dataLayer.push(arguments); };
               window.gtag('js', new Date());
-              window.gtag('config', 'G-2CG28PL968', { send_page_view: false });
-              window.gtag('event', 'page_view', {
-                page_title: 'Doorhanger',
-                page_location: window.location.href,
-                page_path: '/doorhanger',
-                event_callback: redirect,
-                event_timeout: 200
-              });
+              window.gtag('config', 'G-2CG28PL968');
 
               window.setTimeout(redirect, 250);
             })();
