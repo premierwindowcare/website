@@ -58,7 +58,7 @@ export function Hero() {
         <div className="max-w-3xl mx-auto text-center">
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in-up text-balance">
-            Crystal Clear Windows Without the Hassle
+            Window Cleaning in Hudsonville, MI
           </h1>
 
           <p className="text-lg md:text-xl text-white/90 mb-10 animate-fade-in-up animation-delay-200 text-pretty">
