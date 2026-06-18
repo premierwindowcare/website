@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     'Holland',
     'Muskegon',
     'Kalamazoo',
-    'Grand Haven',
+    'Byron Center',
     'Jenison',
     'Wyoming MI',
     'Allendale MI',

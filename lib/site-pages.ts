@@ -171,7 +171,7 @@ export const serviceCities = [
   "Grandville",
   "Jenison",
   "Holland",
-  "Grand Haven",
+  "Byron Center",
 ] as const
 
 export const locationPages = {
@@ -259,21 +259,25 @@ export const locationPages = {
       "Great for homes, cottages, storefronts, and businesses that depend on bright, clear views.",
     ],
   },
-  "Grand Haven": {
+  "Byron Center": {
     heroIntro:
-      "Premier Window Care provides Grand Haven window cleaning for properties that need clear glass despite lakeshore weather, wind, moisture, and seasonal residue.",
+      "Premier Window Care provides Byron Center window cleaning for homeowners and businesses that want clear glass, brighter rooms, and a polished property without the weekend ladder work.",
     servicesIntro:
-      "Grand Haven homes and businesses often need more than a quick wipe. We clean interior and exterior glass, address frames and sills, and help with hard water stains that can dull the view.",
-    expertiseTitle: "Grand Haven Window Cleaning Expertise",
+      "Byron Center homes, neighborhoods, offices, and storefronts can collect pollen, dust, sprinkler spots, and seasonal grime. We clean interior and exterior glass, refresh frames and sills, and offer hard water removal when mineral buildup starts affecting clarity.",
+    expertiseTitle: "Byron Center Window Cleaning Expertise",
     expertise: [
-      "A strong fit for lakeshore properties where wind, moisture, and outdoor residue can build up fast.",
-      "Exterior cleaning helps restore curb appeal for homes, rentals, storefronts, and offices.",
-      "Recurring maintenance helps keep views clearer through changing West Michigan seasons.",
+      "A strong fit for Byron Center homes with large window layouts, newer builds, and detailed exterior finishes.",
+      "Helpful after spring pollen, summer dust, sprinkler overspray, and fall weather leave buildup on glass and sill areas.",
+      "Commercial service supports local offices, shops, and customer-facing properties that need a clean, professional first impression.",
     ],
   },
 } as const
 
 export function citySlug(city: string) {
+  if (city === "Byron Center") {
+    return "byron-center"
+  }
+
   return `${city.toLowerCase().replace(/\s+/g, "-")}-mi`
 }
 
