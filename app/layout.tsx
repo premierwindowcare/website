@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     'Muskegon',
     'Kalamazoo',
     'Byron Center',
-    'Jenison',
+    'Allendale',
     'Wyoming MI',
     'Allendale MI',
     'Zeeland MI',

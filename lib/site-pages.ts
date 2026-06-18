@@ -169,7 +169,7 @@ export const serviceCities = [
   "Wyoming",
   "Kentwood",
   "Grandville",
-  "Jenison",
+  "Allendale",
   "Holland",
   "Byron Center",
 ] as const
@@ -235,16 +235,16 @@ export const locationPages = {
       "Commercial service supports storefronts, offices, and customer-facing spaces with cleaner presentation.",
     ],
   },
-  Jenison: {
+  Allendale: {
     heroIntro:
-      "Premier Window Care provides window cleaning in Jenison, MI with a local, detail-focused approach for homes and businesses across the area.",
+      "Premier Window Care provides window cleaning in Allendale, MI for homeowners, rentals, offices, and local businesses that want clear glass and a cleaner first impression.",
     servicesIntro:
-      "Jenison windows can collect dust, pollen, fingerprints, and weather film quickly. Our team cleans interior and exterior glass, frames, sills, and hard water stains so the finished result feels complete.",
-    expertiseTitle: "Jenison Window Cleaning Expertise",
+      "Allendale properties can pick up pollen, road dust, sprinkler residue, fingerprints, and seasonal grime quickly. We clean interior and exterior glass, refresh frames and sills, and offer hard water removal when mineral buildup starts dulling the view.",
+    expertiseTitle: "Allendale Window Cleaning Expertise",
     expertise: [
-      "Strong option for residential homes where natural light and clean interior views matter.",
-      "Exterior service helps remove pollen, cobwebs, and buildup around frames and sill areas.",
-      "Maintenance plans help keep windows consistently clean instead of waiting for buildup to become obvious.",
+      "Helpful for homes, rentals, and student housing where clean windows make the property feel brighter and better maintained.",
+      "Exterior service helps remove pollen, dust, cobwebs, and weather film from glass, frames, and sill areas.",
+      "Recurring maintenance is a strong fit for Allendale properties that see steady seasonal buildup or frequent guest turnover.",
     ],
   },
   Holland: {
