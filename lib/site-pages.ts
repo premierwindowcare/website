@@ -170,6 +170,8 @@ export const serviceCities = [
   "Kentwood",
   "Grandville",
   "Allendale",
+  "Zeeland",
+  "Jenison",
   "Holland",
   "Byron Center",
 ] as const
@@ -245,6 +247,30 @@ export const locationPages = {
       "Helpful for homes, rentals, and student housing where clean windows make the property feel brighter and better maintained.",
       "Exterior service helps remove pollen, dust, cobwebs, and weather film from glass, frames, and sill areas.",
       "Recurring maintenance is a strong fit for Allendale properties that see steady seasonal buildup or frequent guest turnover.",
+    ],
+  },
+  Zeeland: {
+    heroIntro:
+      "Premier Window Care serves Zeeland, MI with detail-focused window cleaning for homes, storefronts, offices, and local properties that need a brighter, cleaner look.",
+    servicesIntro:
+      "Zeeland windows can collect farm dust, pollen, rain spots, fingerprints, and seasonal buildup through West Michigan weather changes. We clean interior glass, exterior glass, frames, sills, and hard water buildup so the finished result feels complete.",
+    expertiseTitle: "Zeeland Window Cleaning Expertise",
+    expertise: [
+      "A strong fit for Zeeland homeowners who want cleaner natural light without spending time on ladders, screens, and exterior buildup.",
+      "Exterior cleaning helps remove dust, pollen, cobwebs, and weather residue from the full window area.",
+      "Commercial service helps Zeeland storefronts, offices, and customer-facing properties keep a cleaner first impression.",
+    ],
+  },
+  Jenison: {
+    heroIntro:
+      "Premier Window Care provides window cleaning in Jenison, MI with a local, detail-focused approach for homes and businesses across the area.",
+    servicesIntro:
+      "Jenison windows can collect dust, pollen, fingerprints, sprinkler residue, and weather film quickly. Our team cleans interior and exterior glass, frames, sills, and hard water buildup so the finished result feels complete.",
+    expertiseTitle: "Jenison Window Cleaning Expertise",
+    expertise: [
+      "Strong option for residential homes where natural light and clean interior views matter.",
+      "Exterior service helps remove pollen, cobwebs, dust, and buildup around frames and sill areas.",
+      "Maintenance plans help keep Jenison windows consistently clean instead of waiting for buildup to become obvious.",
     ],
   },
   Holland: {
