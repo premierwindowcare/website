@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Shield, Sparkles, ThumbsUp } from "lucide-react"
+import { Shield, Sparkles, Star, ThumbsUp } from "lucide-react"
 import { HashLink } from "@/components/hash-link"
 
 export function Hero() {
@@ -60,6 +60,20 @@ export function Hero() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in-up text-balance">
             Window Cleaning in Hudsonville, MI
           </h1>
+
+          <div className="mb-6 flex flex-wrap items-center justify-center gap-2 text-white animate-fade-in-up animation-delay-200">
+            <div className="flex gap-1">
+              {[...Array(5)].map((_, index) => (
+                <Star
+                  key={index}
+                  className="h-5 w-5 fill-blue-pale text-blue-pale"
+                />
+              ))}
+            </div>
+            <span className="text-sm font-semibold md:text-base">
+              5.0&nbsp;&nbsp;·&nbsp;&nbsp;24+ Google reviews
+            </span>
+          </div>
 
           <p className="text-lg md:text-xl text-white/90 mb-10 animate-fade-in-up animation-delay-200 text-pretty">
             Reliable window cleaning for homes and businesses. Fast, streak-free results from a hardworking local team you can trust.

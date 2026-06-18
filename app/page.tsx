@@ -3,7 +3,7 @@ import { Hero } from "@/components/hero"
 import { Services } from "@/components/services"
 import { TrustBar } from "@/components/trust-bar"
 import { WhyUs } from "@/components/why-us"
-import { Testimonials } from "@/components/testimonials"
+import { Reviews } from "@/components/testimonials"
 import { ServiceArea } from "@/components/service-area"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
       <Services />
       <WhyUs />
-      <Testimonials />
+      <Reviews />
       <ServiceArea />
       <Contact />
       <TrustBar />

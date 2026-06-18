@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Phone, Mail } from "lucide-react"
 import { HashLink } from "@/components/hash-link"
+import { cityHref, serviceCities, servicePages } from "@/lib/site-pages"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -11,7 +12,7 @@ export function Footer() {
   return (
     <footer className="bg-blue-deep py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid gap-8 mb-8 sm:grid-cols-2 lg:grid-cols-5">
           
           {/* Brand */}
           <div className="flex flex-col items-start text-left">
@@ -35,21 +36,51 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Quick Links</h4>
             <nav className="flex flex-col gap-2">
-              <HashLink href="#services" className="text-white/70 hover:text-white transition-colors text-sm">
+              <HashLink href="/#services" className="text-white/70 hover:text-white transition-colors text-sm">
                 Services
               </HashLink>
-              <HashLink href="#why-us" className="text-white/70 hover:text-white transition-colors text-sm">
+              <HashLink href="/#why-us" className="text-white/70 hover:text-white transition-colors text-sm">
                 Why Us
               </HashLink>
-              <HashLink href="#testimonials" className="text-white/70 hover:text-white transition-colors text-sm">
-                Testimonials
+              <HashLink href="/#reviews" className="text-white/70 hover:text-white transition-colors text-sm">
+                Reviews
               </HashLink>
-              <HashLink href="#service-area" className="text-white/70 hover:text-white transition-colors text-sm">
+              <HashLink href="/#service-area" className="text-white/70 hover:text-white transition-colors text-sm">
                 Service Area
               </HashLink>
-              <HashLink href="#contact" className="text-white/70 hover:text-white transition-colors text-sm">
+              <HashLink href="/#contact" className="text-white/70 hover:text-white transition-colors text-sm">
                 Contact
               </HashLink>
+            </nav>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-white mb-4">Services</h4>
+            <nav className="flex flex-col gap-2">
+              {servicePages.map((service) => (
+                <Link
+                  key={service.slug}
+                  href={`/${service.slug}`}
+                  className="text-white/70 hover:text-white transition-colors text-sm"
+                >
+                  {service.cardTitle}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-white mb-4">Service Areas</h4>
+            <nav className="grid grid-cols-2 gap-x-4 gap-y-2 sm:grid-cols-1">
+              {serviceCities.map((city) => (
+                <Link
+                  key={city}
+                  href={cityHref(city)}
+                  className="text-white/70 hover:text-white transition-colors text-sm"
+                >
+                  {city}
+                </Link>
+              ))}
             </nav>
           </div>
 
@@ -71,6 +102,20 @@ export function Footer() {
                 <Mail className="w-4 h-4 text-blue-light" />
                 info@cleanwithpremier.com
               </a>
+            </div>
+
+            <div className="mt-5 aspect-square w-full max-w-44 overflow-hidden rounded-xl border border-white/15 bg-white/5 shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d268387.4018387342!2d-86.22790670154734!3d42.90346464779628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6dcf1b3e3a118483%3A0x27e984a22b749c13!2sPremier%20Window%20Care!5e1!3m2!1sen!2sus!4v1781732019464!5m2!1sen!2sus"
+                width="180"
+                height="180"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Premier Window Care location map"
+                className="block h-full w-full"
+              />
             </div>
           </div>
         </div>

@@ -24,12 +24,10 @@ export function TrustBar() {
   return (
     <section className="py-10 md:py-14 bg-white">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
         <h2 className="text-xl md:text-2xl font-bold text-blue-deep text-center mb-8">
           Why West Michigan Trusts Us
         </h2>
 
-        {/* Trust Items - Horizontal Layout */}
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8">
           {trustItems.map((item, index) => (
             <div

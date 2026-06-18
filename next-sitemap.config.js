@@ -18,7 +18,7 @@ module.exports = {
     const homepageSections = [
       '/#services',
       '/#why-us',
-      '/#testimonials',
+      '/#reviews',
       '/#service-area',
       '/#contact',
     ]

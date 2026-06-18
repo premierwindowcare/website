@@ -97,6 +97,15 @@
   }
 }
 
+@keyframes review-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
 }
@@ -107,6 +116,20 @@
 
 .animate-float-slow {
   animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-review-marquee {
+  animation: review-marquee 32s linear infinite;
+}
+
+:root {
+  --review-card-step: 344px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --review-card-step: 414px;
+  }
 }
 
 .animation-delay-200 {

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
@@ -36,8 +36,6 @@ export const metadata: Metadata = {
   },
 
   manifest: '/manifest.json',
-
-  themeColor: '#ffffff',
 
   other: {
     'msapplication-TileColor': '#ffffff',
@@ -86,6 +84,10 @@ export const metadata: Metadata = {
     'affordable window cleaning',
     'local window cleaning company',
   ],
+}
+
+export const viewport: Viewport = {
+  themeColor: '#ffffff',
 }
 
 export default function RootLayout({
