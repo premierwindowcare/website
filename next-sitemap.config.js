@@ -4,7 +4,7 @@ module.exports = {
   generateRobotsTxt: true,
   changefreq: 'weekly',
   priority: 0.7,
-  exclude: ['/doorhanger'],
+  exclude: ['/doorhanger', '/hard-water-stain-removal'],
   robotsTxtOptions: {
     policies: [
       {
