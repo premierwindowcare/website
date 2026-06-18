@@ -122,15 +122,19 @@
   animation: review-marquee 32s linear infinite;
 }
 
-:root {
-  --review-card-step: 344px;
-}
-
-@media (min-width: 768px) {
   :root {
-    --review-card-step: 414px;
+    --review-card-width: min(84vw, 360px);
+    --review-card-gap: 1rem;
+    --review-card-step: calc(var(--review-card-width) + var(--review-card-gap));
   }
-}
+
+  @media (min-width: 768px) {
+    :root {
+      --review-card-width: 390px;
+      --review-card-gap: 1.5rem;
+      --review-card-step: calc(var(--review-card-width) + var(--review-card-gap));
+    }
+  }
 
 .animation-delay-200 {
   animation-delay: 200ms;

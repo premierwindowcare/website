@@ -175,11 +175,11 @@ export function Reviews() {
       </div>
 
       <div className="relative">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-white to-transparent md:w-32" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-white to-transparent md:w-32" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-32 bg-gradient-to-r from-white to-transparent md:block" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 hidden w-32 bg-gradient-to-l from-white to-transparent md:block" />
 
         <div
-          className={`flex w-max gap-6 ${
+          className={`flex w-max gap-[var(--review-card-gap)] pl-[calc((100vw_-_var(--review-card-width))_/_2)] md:pl-0 ${
             isTransitioning ? "transition-transform duration-500 ease-out" : ""
           }`}
           style={{
@@ -190,7 +190,7 @@ export function Reviews() {
           {reviewLoop.map((review, index) => (
             <article
               key={`${review.name}-${index}`}
-              className="relative w-[320px] rounded-2xl border border-blue-pale bg-white p-6 shadow-lg md:w-[390px]"
+              className="relative w-[var(--review-card-width)] rounded-2xl border border-blue-pale bg-white p-6 shadow-lg"
             >
               <div
                 aria-label="Google review"
@@ -232,7 +232,7 @@ export function Reviews() {
           ))}
         </div>
 
-        <div className="pointer-events-none absolute inset-x-0 top-1/2 z-20 -translate-y-1/2">
+        <div className="pointer-events-none absolute inset-x-0 top-1/2 z-20 hidden -translate-y-1/2 md:block">
           <div className="container mx-auto flex justify-between px-4">
             <button
               type="button"
@@ -251,6 +251,25 @@ export function Reviews() {
               <ChevronRight className="h-5 w-5" />
             </button>
           </div>
+        </div>
+
+        <div className="mt-8 flex justify-center gap-3 md:hidden">
+          <button
+            type="button"
+            aria-label="Previous review"
+            onClick={goToPrevious}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white text-blue-deep shadow-md transition-colors hover:bg-blue-bg"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            type="button"
+            aria-label="Next review"
+            onClick={goToNext}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white text-blue-deep shadow-md transition-colors hover:bg-blue-bg"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
         </div>
       </div>
     </section>
