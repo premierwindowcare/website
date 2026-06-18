@@ -5,6 +5,7 @@ import { TrustBar } from "@/components/trust-bar"
 import { WhyUs } from "@/components/why-us"
 import { Reviews } from "@/components/testimonials"
 import { ServiceArea } from "@/components/service-area"
+import { FAQ } from "@/components/faq"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 
@@ -18,6 +19,7 @@ export default function Home() {
       <Reviews />
       <ServiceArea />
       <Contact />
+      <FAQ />
       <TrustBar />
       <Footer />
     </main>

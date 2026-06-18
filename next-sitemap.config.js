@@ -20,6 +20,7 @@ module.exports = {
       '/#why-us',
       '/#reviews',
       '/#service-area',
+      '/#faq',
       '/#contact',
     ]
 

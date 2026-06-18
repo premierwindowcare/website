@@ -127,14 +127,15 @@ export function Reviews() {
   const reviewLoop = [...reviews, ...reviews.slice(0, 4)]
   const [activeIndex, setActiveIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(true)
+  const [timerResetKey, setTimerResetKey] = useState(0)
 
   useEffect(() => {
-    const interval = window.setInterval(() => {
+    const timeout = window.setTimeout(() => {
       setActiveIndex((index) => index + 1)
     }, 4500)
 
-    return () => window.clearInterval(interval)
-  }, [])
+    return () => window.clearTimeout(timeout)
+  }, [activeIndex, timerResetKey])
 
   const handleTransitionEnd = () => {
     if (activeIndex >= reviews.length) {
@@ -147,6 +148,7 @@ export function Reviews() {
   }
 
   const goToPrevious = () => {
+    setTimerResetKey((key) => key + 1)
     setActiveIndex((index) => {
       if (index <= 0) {
         return reviews.length - 1
@@ -157,6 +159,7 @@ export function Reviews() {
   }
 
   const goToNext = () => {
+    setTimerResetKey((key) => key + 1)
     setActiveIndex((index) => index + 1)
   }
 
