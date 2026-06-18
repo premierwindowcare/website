@@ -64,7 +64,7 @@ export function ServicePageLayout({ service }: ServicePageLayoutProps) {
       {![
         "commercial-window-cleaning",
         "interior-window-cleaning",
-        "hard-water-stain-removal",
+        "hard-water-removal",
       ].includes(service.slug) && (
         <section className="bg-white py-10 md:py-14">
           <div className="container mx-auto px-4">

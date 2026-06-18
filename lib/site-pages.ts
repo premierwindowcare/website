@@ -62,7 +62,7 @@ export const servicePages = [
       "/20260603_152201.jpg",
       "/20260520_131217.jpg",
       "/IMG_20260531_173952_710.jpg",
-      "/DJI_0083.jpg",
+      "/DJI_0083.JPG",
       "/20260611_123510.jpg",
     ],
     benefits: [
@@ -86,7 +86,7 @@ export const servicePages = [
     ],
   },
   {
-    slug: "hard-water-stain-removal",
+    slug: "hard-water-removal",
     title: "Hard Water Removal",
     metaTitle: "Hard Water Removal | Premier Window Care",
     metaDescription:
@@ -118,7 +118,7 @@ export const servicePages = [
       "Addressing hard water buildup early helps protect the glass from etching and reduces the risk of permanent damage.",
     ],
     processSteps: [
-      "We first inspect the glass to understand how severe the mineral spotting is and whether stain removal is the right fit.",
+      "We first inspect the glass to understand how severe the mineral spotting is and whether hard water removal is the right fit.",
       "Affected areas are treated with a detail-focused process that targets the deposits without treating the window like a basic wash.",
       "Once the buildup is addressed, the glass is cleaned and reviewed so you can see the improvement in clarity.",
     ],
