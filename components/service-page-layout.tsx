@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Contact } from "@/components/contact"
+import { Contact, ContactForm } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { TrustBar } from "@/components/trust-bar"
@@ -13,6 +13,8 @@ type ServicePageLayoutProps = {
 }
 
 export function ServicePageLayout({ service }: ServicePageLayoutProps) {
+  const galleryImages = Array.from(new Set(service.galleryImages))
+
   return (
     <main>
       <Header />
@@ -22,8 +24,8 @@ export function ServicePageLayout({ service }: ServicePageLayoutProps) {
         <div className="absolute bottom-0 left-8 h-64 w-64 rounded-full bg-blue-pale/20 blur-3xl" />
 
         <div className="container relative z-10 mx-auto px-4">
-          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-            <div>
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(420px,0.85fr)] lg:items-start lg:gap-14">
+            <div className="lg:pt-10">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
                 Window Cleaning Service
               </div>
@@ -48,44 +50,30 @@ export function ServicePageLayout({ service }: ServicePageLayoutProps) {
               </Button>
             </div>
 
-            <div className="relative mx-auto aspect-[4/3] w-full max-w-xl overflow-hidden rounded-2xl border border-white/25 shadow-2xl">
-              <Image
-                src={service.image}
-                alt={service.cardTitle}
-                fill
-                priority
-                className="object-cover"
-              />
-            </div>
+            <ContactForm className="lg:max-w-xl lg:justify-self-end" />
           </div>
         </div>
       </section>
 
-      {![
-        "commercial-window-cleaning",
-        "interior-window-cleaning",
-        "hard-water-removal",
-      ].includes(service.slug) && (
-        <section className="bg-white py-10 md:py-14">
-          <div className="container mx-auto px-4">
-            <div className="grid gap-4 md:grid-cols-3">
-              {service.galleryImages.map((image, index) => (
-                <div
-                  key={image}
-                  className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-sm"
-                >
-                  <Image
-                    src={image}
-                    alt={`${service.cardTitle} photo ${index + 1}`}
-                    fill
-                    className="object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
-              ))}
-            </div>
+      <section className="bg-white py-10 md:py-14">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-4 md:grid-cols-3">
+            {galleryImages.map((image, index) => (
+              <div
+                key={image}
+                className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-sm"
+              >
+                <Image
+                  src={image}
+                  alt={`${service.cardTitle} photo ${index + 1}`}
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+            ))}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       <section className="bg-blue-soft py-16 md:py-24">
         <div className="container mx-auto px-4">

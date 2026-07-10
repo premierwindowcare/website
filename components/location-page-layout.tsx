@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { ArrowRight, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Contact } from "@/components/contact"
+import { Contact, ContactForm } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { MaintenancePlans, ServiceCards } from "@/components/services"
@@ -22,7 +22,8 @@ export function LocationPageLayout({ page }: LocationPageLayoutProps) {
         <div className="absolute bottom-0 left-8 h-64 w-64 rounded-full bg-blue-pale/20 blur-3xl" />
 
         <div className="container relative z-10 mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(420px,0.85fr)] lg:items-start lg:gap-14">
+          <div className="max-w-3xl text-center lg:pt-10 lg:text-left">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
               <MapPin className="h-4 w-4 text-blue-pale" />
               West Michigan Service Area
@@ -36,7 +37,7 @@ export function LocationPageLayout({ page }: LocationPageLayoutProps) {
               {page.heroIntro}
             </p>
 
-            <div className="flex justify-center">
+            <div className="flex justify-center lg:justify-start">
               <Button
                 asChild
                 size="lg"
@@ -48,6 +49,8 @@ export function LocationPageLayout({ page }: LocationPageLayoutProps) {
                 </Link>
               </Button>
             </div>
+          </div>
+          <ContactForm className="lg:max-w-xl lg:justify-self-end" />
           </div>
         </div>
       </section>

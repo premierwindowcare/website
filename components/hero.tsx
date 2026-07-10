@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Shield, Sparkles, Star, ThumbsUp } from "lucide-react"
 import { HashLink } from "@/components/hash-link"
+import { ContactForm } from "@/components/contact"
 
 export function Hero() {
   const trustBadges = [
@@ -55,13 +56,14 @@ export function Hero() {
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(420px,0.85fr)] lg:gap-14">
+        <div className="max-w-3xl text-center lg:text-left">
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in-up text-balance">
             Window Cleaning in Hudsonville, MI
           </h1>
 
-          <div className="mb-6 flex flex-wrap items-center justify-center gap-2 text-white animate-fade-in-up animation-delay-200">
+          <div className="mb-6 flex flex-wrap items-center justify-center lg:justify-start gap-2 text-white animate-fade-in-up animation-delay-200">
             <div className="flex gap-1">
               {[...Array(5)].map((_, index) => (
                 <Star
@@ -71,7 +73,7 @@ export function Hero() {
               ))}
             </div>
             <span className="text-sm font-semibold md:text-base">
-              5.0&nbsp;&nbsp;·&nbsp;&nbsp;24+ Google reviews
+              5.0&nbsp;&nbsp;·&nbsp;&nbsp;30+ Google reviews
             </span>
           </div>
 
@@ -79,7 +81,7 @@ export function Hero() {
             Reliable window cleaning for homes and businesses. Fast, streak-free results from a hardworking local team you can trust.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14 animate-fade-in-up animation-delay-400">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-14 animate-fade-in-up animation-delay-400">
             <Button
               asChild
               size="lg"
@@ -92,7 +94,7 @@ export function Hero() {
           </div>
 
           {/* Trust Badges */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6 animate-fade-in-up animation-delay-600">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 animate-fade-in-up animation-delay-600">
             {trustBadges.map((badge, index) => (
               <div
                 key={index}
@@ -107,6 +109,8 @@ export function Hero() {
             ))}
           </div>
 
+        </div>
+        <ContactForm className="relative z-10 lg:max-w-xl lg:justify-self-end" />
         </div>
       </div>
     </section>

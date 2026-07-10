@@ -1,4 +1,4 @@
-import { Building2, Droplets, MapPin, Sparkles, Square } from "lucide-react"
+import { Armchair, Building2, Droplets, House, MapPin } from "lucide-react"
 
 export const phoneNumber = "(616) 422-4749"
 export const phoneHref = "tel:6164224749"
@@ -17,12 +17,12 @@ export const servicePages = [
     cardTitle: "Interior Window Cleaning",
     cardDescription:
       "Detailed inside glass, frames, and sill cleaning for a brighter, cleaner home.",
-    icon: Sparkles,
-    image: "/generated-interior-window.png",
+    icon: Armchair,
+    image: "/IMG_4360.webp",
     galleryImages: [
-      "/inside_window.png",
-      "/generated-interior-kitchen-window.png",
-      "/generated-interior-bedroom-window.png",
+      "/split_portage.png",
+      "/IMG_4387.webp",
+      "/IMG_4360.webp",
     ],
     benefits: [
       "Removes fingerprints, dust, and everyday buildup",
@@ -55,8 +55,8 @@ export const servicePages = [
     cardTitle: "Exterior Window Cleaning",
     cardDescription:
       "Clear away outdoor grime, pollen, and weather spots for a sharper curb appeal.",
-    icon: Square,
-    image: "/20260520_131217.jpg",
+    icon: House,
+    image: "/IMG_20260531_174000_717.jpg",
     galleryImages: [
       "/IMG_20260531_174000_717.jpg",
       "/20260603_152201.jpg",
@@ -137,9 +137,9 @@ export const servicePages = [
     icon: Building2,
     image: "/generated-commercial-window.png",
     galleryImages: [
+      "/IMG_4387.webp",
       "/generated-commercial-window.png",
-      "/garden_house.jpg",
-      "/high_window.jpg",
+      "/portage.webp",
     ],
     benefits: [
       "Creates a cleaner first impression for customers",

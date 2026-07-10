@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, Send } from "lucide-react"
 
-export function Contact() {
+export function ContactForm({ className = "" }: { className?: string }) {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -57,60 +57,7 @@ export function Contact() {
   }
 
   return (
-    <section
-      id="contact"
-      className="py-16 md:py-24 bg-gradient-to-br from-blue-primary via-blue-bright to-blue-sky relative overflow-hidden"
-    >
-      {/* Decorative Elements */}
-      <div className="absolute top-0 right-0 w-72 md:w-96 h-72 md:h-96 bg-blue-light/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-56 md:w-72 h-56 md:h-72 bg-blue-pale/15 rounded-full blur-3xl" />
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-
-          {/* LEFT SIDE */}
-          <div className="w-full mt-1 lg:mt-8">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
-              Request Your Free Quote Now
-            </h2>
-
-            <p className="text-white/85 text-base md:text-lg mb-6 md:mb-8">
-              Contact us for a free, no-obligation quote. We're happy to answer any questions you may have about our services.
-            </p>
-
-            <div className="flex flex-col sm:flex-row lg:flex-col gap-3 sm:gap-4">
-              <a
-                href="tel:6164224749"
-                className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 border border-white/20 hover:bg-white/20 transition-colors"
-              >
-                <div className="w-11 h-11 rounded-full bg-blue-light/30 flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-blue-pale" />
-                </div>
-                <div>
-                  <p className="text-sm text-white/70">Call Us</p>
-                  <p className="text-white font-semibold">(616) 422-4749</p>
-                </div>
-              </a>
-
-              <a
-                href="mailto:info@cleanwithpremier.com"
-                className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 border border-white/20 hover:bg-white/20 transition-colors"
-              >
-                <div className="w-11 h-11 rounded-full bg-blue-light/30 flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-blue-pale" />
-                </div>
-                <div>
-                  <p className="text-sm text-white/70">Email Us</p>
-                  <p className="text-white font-semibold text-sm md:text-base">
-                    info@cleanwithpremier.com
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          {/* RIGHT SIDE */}
-          <div className="w-full bg-white rounded-2xl p-5 md:p-8 shadow-2xl">
+          <div className={`w-full bg-white rounded-2xl p-5 md:p-8 shadow-2xl ${className}`}>
 
             {submitted ? (
               <div className="text-center py-10">
@@ -266,6 +213,39 @@ export function Contact() {
             )}
 
           </div>
+  )
+}
+
+export function Contact() {
+  return (
+    <section
+      id="contact"
+      className="py-16 md:py-24 bg-gradient-to-br from-blue-primary via-blue-bright to-blue-sky relative overflow-hidden"
+    >
+      <div className="absolute top-0 right-0 w-72 md:w-96 h-72 md:h-96 bg-blue-light/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-56 md:w-72 h-56 md:h-72 bg-blue-pale/15 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+          <div className="w-full mt-1 lg:mt-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+              Request Your Free Quote Now
+            </h2>
+            <p className="text-white/85 text-base md:text-lg mb-6 md:mb-8">
+              Contact us for a free, no-obligation quote. We're happy to answer any questions you may have about our services.
+            </p>
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-3 sm:gap-4">
+              <a href="tel:6164224749" className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 border border-white/20 hover:bg-white/20 transition-colors">
+                <div className="w-11 h-11 rounded-full bg-blue-light/30 flex items-center justify-center"><Phone className="w-5 h-5 text-blue-pale" /></div>
+                <div><p className="text-sm text-white/70">Call Us</p><p className="text-white font-semibold">(616) 422-4749</p></div>
+              </a>
+              <a href="mailto:info@cleanwithpremier.com" className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 border border-white/20 hover:bg-white/20 transition-colors">
+                <div className="w-11 h-11 rounded-full bg-blue-light/30 flex items-center justify-center"><Mail className="w-5 h-5 text-blue-pale" /></div>
+                <div><p className="text-sm text-white/70">Email Us</p><p className="text-white font-semibold text-sm md:text-base">info@cleanwithpremier.com</p></div>
+              </a>
+            </div>
+          </div>
+          <ContactForm />
         </div>
       </div>
     </section>
