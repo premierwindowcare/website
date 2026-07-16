@@ -164,8 +164,8 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-border">
-          <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
+        <div className="lg:hidden max-h-[calc(100dvh-5rem)] md:max-h-[calc(100dvh-6rem)] overflow-y-auto overscroll-contain bg-white border-t border-border">
+          <nav className="container mx-auto px-4 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] flex flex-col gap-4">
             <Link
               href="/"
               className="text-foreground hover:text-blue-primary transition-colors py-2 font-medium"
