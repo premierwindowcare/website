@@ -95,8 +95,7 @@ export function MaintenancePlans() {
           With Our Maintenance Plans
         </h3>
         <p className="text-muted-foreground md:text-lg">
-          Choose the cleaning schedule that fits your home and keep more money
-          in your pocket with recurring service savings.
+          Pick the cleaning plan that best fits your home or business and save more with every scheduled visit.
         </p>
       </div>
 

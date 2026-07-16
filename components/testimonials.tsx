@@ -6,17 +6,87 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 export function Reviews() {
   const reviews = [
     {
+      name: "Candace Molenkamp",
+      location: "Google Review",
+      quote: "Our windows look great! We are so happy with how they turned out.",
+      rating: 5,
+    },
+    {
+      name: "Miranda Galliani",
+      location: "Google Review",
+      quote:
+        "Windows, screens, and tracks were able to be done the same day. They completed the job so quickly, and everything looks amazing! Very impressed with this company and would definitely recommend. Pricing was great, too!",
+      rating: 5,
+    },
+    {
+      name: "Alan N",
+      location: "Google Review",
+      quote: "Super polite and prompt.",
+      rating: 5,
+    },
+    {
+      name: "Digvijay Singh",
+      location: "Google Review",
+      quote: "Reasonable price.",
+      rating: 5,
+    },
+    {
+      name: "Walter",
+      location: "Google Review",
+      quote:
+        "Did a great job and was able to clean the windows that I find hard to reach. The serviceman arrived at the appointed time and was done with the entire exterior within a couple of hours. Now I can do something other than clean windows on a Saturday afternoon.",
+      rating: 5,
+    },
+    {
+      name: "Amanda Semple",
+      location: "Google Review",
+      quote: "Reasonable price.",
+      rating: 5,
+    },
+    {
+      name: "Steve Johnson",
+      location: "Google Review",
+      quote: "Five-star Google review.",
+      rating: 5,
+    },
+    {
+      name: "Nico Smith",
+      location: "Google Review",
+      quote:
+        "They did a great job cleaning up the windows. Very professional and got the job done with no mess or hassle.",
+      rating: 5,
+    },
+    {
+      name: "Mark Sahro",
+      location: "Google Review",
+      quote:
+        "They were professional, efficient, and friendly. The value they provided for the job they did was cost-effective.",
+      rating: 5,
+    },
+    {
+      name: "Laura Moore",
+      location: "Google Review",
+      quote: "Very professional, great communication!",
+      rating: 5,
+    },
+    {
+      name: "Nicole Sutton",
+      location: "Google Review",
+      quote: "Very quick and clean! Even did the garage windows!",
+      rating: 5,
+    },
+    {
+      name: "Kara Hill",
+      location: "Google Review",
+      quote:
+        "This company did an amazing job on my windows! Above and beyond what I have had in the past! Extremely reasonable price, professional, and kind! I would highly recommend them and will be using them in the future.",
+      rating: 5,
+    },
+    {
       name: "Brenda Seitz",
       location: "Google Review",
       quote:
         "Arrived on time, were courteous and respectful and did an amazing job. Will definitely use them again and refer to others.",
-      rating: 5,
-    },
-    {
-      name: "Adam Breuker",
-      location: "Google Review",
-      quote:
-        "My windows look flawless. These guys did a great job and for a good price. I couldn't be happier.",
       rating: 5,
     },
     {
@@ -36,12 +106,6 @@ export function Reviews() {
       name: "Kathleen Kelley",
       location: "Google Review",
       quote: "So excited to have clean windows. Thank you.",
-      rating: 5,
-    },
-    {
-      name: "Isaiah Murphy",
-      location: "Google Review",
-      quote: "Great job highly recommend.",
       rating: 5,
     },
     {
@@ -80,7 +144,7 @@ export function Reviews() {
       name: "Keith Berman",
       location: "Google Review",
       quote:
-        "The team showed on time, if not early, for the scheduled job. They did an amazing job. Our windows look great.",
+        "The team showed on time, if not early, for the scheduled job. They did an amazing job. Our windows look great! Highly recommend this group of hardworking folks. Additionally, we have many plants and flower pots, and they were extremely careful not to disturb or harm any of them. We will work with them in the future.",
       rating: 5,
     },
     {
@@ -193,7 +257,7 @@ export function Reviews() {
           {reviewLoop.map((review, index) => (
             <article
               key={`${review.name}-${index}`}
-              className="relative w-[var(--review-card-width)] rounded-2xl border border-blue-pale bg-white p-6 shadow-lg"
+              className="relative flex w-[var(--review-card-width)] flex-col rounded-2xl border border-blue-pale bg-white p-6 shadow-lg"
             >
               <div
                 aria-label="Google review"
@@ -220,7 +284,7 @@ export function Reviews() {
                 {review.quote}
               </blockquote>
 
-              <div className="flex items-center gap-3 border-t border-border pt-5">
+              <div className="mt-auto flex items-center gap-3 border-t border-border pt-5">
                 <div className="flex h-11 w-11 items-center justify-center rounded-full border border-blue-pale bg-blue-soft">
                   <span className="text-sm font-bold text-blue-deep">
                     {review.name.charAt(0)}
