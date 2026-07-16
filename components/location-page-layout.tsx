@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, MapPin } from "lucide-react"
+import { ArrowRight, Check, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Contact, ContactForm } from "@/components/contact"
 import { Footer } from "@/components/footer"
@@ -71,31 +71,110 @@ export function LocationPageLayout({ page }: LocationPageLayoutProps) {
       </section>
 
       <section className="bg-white py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-5xl">
-            <div className="mb-8">
-              <h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">
-                {page.expertiseTitle}
-              </h2>
-              <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
-                Every city has different property types, traffic patterns, weather exposure,
-                and window cleaning needs. Here is how we approach work in {page.city}.
-              </p>
-            </div>
-
-            <div className="grid gap-5 md:grid-cols-3">
-              {page.expertise.map((item) => (
-                <div
-                  key={item}
-                  className="rounded-2xl border border-border bg-blue-bg p-6 shadow-sm"
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-6xl space-y-12 md:space-y-16">
+              {page.communitySections.map((section, sectionIndex) => (
+                <section
+                  key={section.title}
+                  className={`rounded-[2rem] p-6 md:p-10 lg:p-12 ${
+                    sectionIndex === 1
+                      ? "bg-blue-deep text-white"
+                      : sectionIndex === 2
+                        ? "border border-border bg-white shadow-sm"
+                        : "bg-blue-soft"
+                  }`}
                 >
-                  <div className="mb-4 h-2 w-12 rounded-full bg-blue-primary" />
-                  <p className="leading-relaxed text-foreground">{item}</p>
-                </div>
+                  <div className="mb-8 max-w-4xl">
+                    <p
+                      className={`mb-3 text-sm font-bold uppercase tracking-[0.18em] ${
+                        sectionIndex === 1 ? "text-blue-pale" : "text-blue-primary"
+                      }`}
+                    >
+                      {sectionIndex === 0
+                        ? "Local care, made simple"
+                        : sectionIndex === 1
+                          ? page.city === "Kentwood"
+                            ? "What we see most"
+                            : "What we see most often"
+                          : page.city === "Hudsonville"
+                            ? "Get to know our hometown"
+                            : `About ${page.city}`}
+                    </p>
+                    <h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">
+                      <span className={sectionIndex === 1 ? "text-white" : undefined}>
+                        {section.title}
+                      </span>
+                    </h2>
+                    <p
+                      className={`text-lg leading-relaxed ${
+                        sectionIndex === 1 ? "text-white/80" : "text-muted-foreground"
+                      }`}
+                    >
+                      {section.intro}
+                    </p>
+                  </div>
+
+                  <div
+                    className={
+                      sectionIndex === 0
+                        ? "grid gap-5 lg:grid-cols-3"
+                        : sectionIndex === 1
+                          ? "grid gap-x-10 gap-y-8 md:grid-cols-2"
+                          : "space-y-8"
+                    }
+                  >
+                    {section.items.map((item, itemIndex) => (
+                      <article
+                        key={item.title}
+                        className={
+                          sectionIndex === 0
+                            ? "rounded-2xl bg-white p-6 shadow-sm"
+                            : sectionIndex === 1
+                              ? "flex gap-4 border-t border-white/20 pt-6"
+                              : "grid gap-4 border-t border-border pt-8 md:grid-cols-[3rem_minmax(0,1fr)]"
+                        }
+                      >
+                        {sectionIndex === 1 ? (
+                          <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/15 text-blue-pale">
+                            <Check className="h-4 w-4" />
+                          </span>
+                        ) : sectionIndex === 2 ? (
+                          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-soft font-bold text-blue-primary">
+                            {itemIndex + 1}
+                          </span>
+                        ) : null}
+                        <div>
+                          <h3
+                            className={`mb-3 text-xl font-bold ${
+                              sectionIndex === 1 ? "text-white" : "text-blue-deep"
+                            }`}
+                          >
+                            {item.title}
+                          </h3>
+                          <p
+                            className={`leading-relaxed ${
+                              sectionIndex === 1 ? "text-white/80" : "text-foreground"
+                            }`}
+                          >
+                            {item.body}
+                          </p>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+
+                  {"closing" in section && section.closing ? (
+                    <div className="mt-10 rounded-2xl bg-white/10 p-6 md:flex md:items-center md:gap-5 md:p-8">
+                      <span className="mb-4 block text-sm font-bold uppercase tracking-[0.15em] text-blue-pale md:mb-0 md:w-32 md:shrink-0">
+                        How we help
+                      </span>
+                      <p className="text-lg leading-relaxed text-white">{section.closing}</p>
+                    </div>
+                  ) : null}
+                </section>
               ))}
             </div>
           </div>
-        </div>
       </section>
 
       <section className="bg-white py-16 md:py-24">
