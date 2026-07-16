@@ -41,7 +41,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav aria-label="Primary navigation" className="hidden items-center gap-5 lg:flex xl:gap-8">
             <Link
               href="/"
               className="text-muted-foreground hover:text-blue-primary transition-colors text-sm font-medium"
@@ -138,10 +138,10 @@ export function Header() {
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden items-center gap-3 md:flex xl:gap-4">
             <a
               href="tel:6164224749"
-              className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-blue-primary transition-colors"
+              className="hidden items-center gap-2 whitespace-nowrap text-sm font-medium text-muted-foreground transition-colors hover:text-blue-primary xl:flex"
             >
               <Phone className="w-4 h-4" />
               (616) 422-4749

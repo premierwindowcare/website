@@ -81,7 +81,7 @@ export const servicePages = [
     ],
     processSteps: [
       "We start by checking window access and identifying areas where the glass, frames, or sills have heavier outdoor buildup.",
-      "The exterior panes are washed with professional tools, then accessible frames and sill areas are wiped to give the window a more finished look.",
+      "The exterior panes are washed with professional tools, then frames and sill areas are wiped to give the window a more finished look.",
       "Before wrapping up, we detail visible edges and review the windows from outside so the final appearance is clean and consistent.",
     ],
   },
@@ -191,7 +191,7 @@ export const locationPages = {
           {
             title: "Complete Care for Hudsonville Homes",
             body:
-              "Our residential cleaning service handles interior glass, exterior glass, accessible frame, and sills to give your window a thorough cleaning that goes beyond the glass in the middle. It’s a great option for spring cleaning, preparing for an event, showing off your home for sale, or simply bringing more natural light in after months of grime and dust collecting. We take extra care around delicate landscaping, flooring, furnishings, and other surfaces in your space. We also pay special attention to the edges and details that bring out the brilliance of clean glass.",
+              "Our residential cleaning service handles interior glass, exterior glass, frames, and sills to give your window a thorough cleaning that goes beyond the glass in the middle. It’s a great option for spring cleaning, preparing for an event, showing off your home for sale, or simply bringing more natural light in after months of grime and dust collecting. We take extra care around delicate landscaping, flooring, furnishings, and other surfaces in your space. We also pay special attention to the edges and details that bring out the brilliance of clean glass.",
           },
           {
             title: "A Clearer First Impression for Your Hudsonville Business",
@@ -272,12 +272,12 @@ export const locationPages = {
           {
             title: "Detailed Care for Grand Rapids Homes",
             body:
-              "Our residential service options include interior and exterior glass cleaning, accessible frame care, and sill care, providing the full improvement to the overall look of the window. It is beneficial for both the seasonal refresh or preparation for sale or showings and bringing more natural light indoors. We pay special attention to interior and exterior details like floors, furnishings, plants, and other surfaces in relation to the window. Whether it is a new build or a home with unique features in an established neighborhood, we take the time to clean the edges and finish to remove any residue that could detract from the appearance of a freshly cleaned room.",
+              "Our residential service options include interior and exterior glass cleaning, frame care, and sill care, improving the overall look of each window. The service works well for seasonal refreshes, preparation for a sale or showing, and bringing more natural light indoors. We take care around flooring, furnishings, plants, and other nearby surfaces. Whether it is a new build or a home with unique features in an established neighborhood, we clean the glass edges carefully so residue does not detract from a freshly cleaned room.",
           },
           {
             title: "A Better View for Local Businesses",
             body:
-              "Many of our clients have commercial storefronts or offices where first impressions on the street and throughout the interior matter greatly. We ensure the proper timing and access to clean the building’s customer-facing glass and doors so that the business appears its best. In addition to regular cleaning, a commercial service can also prepare a space for a special event or seasonal update. For ongoing maintenance, our team can help keep traffic film, dust buildup, fingerprints, and other roadways’ grime from interfering with display windows.",
+              "Many of our clients have commercial storefronts or offices where first impressions from the street and throughout the interior matter greatly. We coordinate timing and access to clean customer-facing glass and doors so the business looks its best. Commercial service can prepare a space for a special event or seasonal update, while ongoing maintenance helps keep traffic film, dust, fingerprints, and road grime from interfering with display windows.",
           },
           {
             title: "Flexible Service across the City",
@@ -297,7 +297,7 @@ export const locationPages = {
               "Homes and businesses located near roads tend to experience the buildup of fine particulate matter from traffic and a gray film that forms over time as the glass becomes dirty. It can accumulate very gradually to the point where it is barely noticeable until the windows are opened on a cloudy or particularly sunny day. Exterior cleaning removes both the film on the surface of the glass and the residue in the frames and sills to give the building a better appearance while improving the view from within the home or business.",
           },
           {
-            title: "Pollen, Rain Spot, and Seasonal Buildup",
+            title: "Pollen, Rain Spots, and Seasonal Buildup",
             body:
               "Pollen from nearby trees can combine with moisture to create a buildup around the glass corners and sills in the spring. A combination of dust, wind-driven rain, falling leaves, and snow can make these spots worse throughout the rest of the year. Rainfall tends to clean the glass, but it is usually insufficient compared to the amount of debris that comes with it, and the streaks and spots can be particularly noticeable when there is a dry day after a storm. Seasonal cleaning can remove the combined buildup to reveal a more extensive, brighter view after a few months of challenging West Michigan weather.",
           },
@@ -318,7 +318,7 @@ export const locationPages = {
       {
         title: "The Community of Grand Rapids, Michigan",
         intro:
-          "Grand Rapids is the county seat of Kent County, is the second-largest city in Michigan, and is the regional center of West Michigan. The city was named for the rapids on the Grand River; Native American tribes, including the Hopewell people and the later Odawa tribe, inhabited the area before the European-American settlement began in the early 19th century. Grand Rapids was incorporated as a city in 1850 and grew as a lumber and shipbuilding center.",
+          "Grand Rapids is the county seat of Kent County, the second-largest city in Michigan, and a regional center for West Michigan. The city was named for the rapids on the Grand River. Indigenous peoples lived in the region long before European-American settlement began in the early 19th century. Grand Rapids was incorporated as a city in 1850 and grew through the lumber and furniture-manufacturing industries.",
         items: [
           {
             title: "From Furniture City to Diverse Economy",
@@ -353,10 +353,10 @@ export const locationPages = {
           {
             title: "Complete Care for Wyoming Homes",
             body:
-              "Our residential service handles interior and exterior glass, accessible frames and sills, and more for a complete cleaning. It's perfect for yearly spring cleaning, prepping the home for an open house or sale, or restoring natural light to a dust-balled or filmed-over space. We work around furnishings, flooring, landscaping, painted surfaces, and other delicate details. Whether it's small panes in established housing or larger glass in new construction, we'll give your home's edges the attention they need to let the room shine.",
+              "Our residential service handles interior and exterior glass, frames, and sills for a complete cleaning. It’s ideal for annual spring cleaning, preparing a home for an open house or sale, or restoring natural light to glass coated with dust and film. We work around furnishings, flooring, landscaping, painted surfaces, and other delicate details. Whether the property has small panes in an established home or larger glass in new construction, we give the glass edges the attention they need to let the room shine.",
           },
           {
-            title: "Professional Cleanings for Local Business",
+            title: "Professional Cleaning for Local Businesses",
             body:
               "Restaurants, offices, and other customer-facing storefronts in Wyoming benefit from having a clean, tidy appearance that invites patrons in from the street. Spotless glass and unobstructed entrances are part of that, letting customers know the business is welcoming from the parking lot through the front desk. We'll work around a commercial space's calendar and needs to give its glass a sharp, fresh appearance. One-time cleanings help prepare a building for a special event or seasonal update while ongoing cleanings keep roads, fingerprints, dust, and other elements from dulling displays or work spaces.",
           },
@@ -375,12 +375,12 @@ export const locationPages = {
           {
             title: "Road Dust and Traffic Film",
             body:
-              "Homeowners and business owners along major thoroughfares often see fine dust and a greyish traffic film accumulate on their glass in addition to standard dirt and grime. The buildup can be slow and steady, becoming most apparent when sunlight hits the hazy pane or when a display is viewed through the film. Exterior cleaning removes the traffic film on the window's surface and lifts remaining particles from accessible frame and sill spaces. This improves visibility for businesses along the street while helping homeowners enjoy the view.",
+              "Homeowners and business owners along major thoroughfares often see road grime, fine dust, and a gray traffic film accumulate on their glass. The buildup can be slow and steady, becoming most apparent when sunlight hits a hazy pane or a display is viewed through the film. Exterior cleaning removes the traffic film from the glass and clears remaining particles from frame and sill spaces. This improves visibility for businesses along the street while helping homeowners enjoy the view.",
           },
           {
             title: "Pollen, Rain Spots, and Seasonal Grime",
             body:
-              "The pollen of spring, summer dust, wind-driven rain, autumn leaves, and winter cold can all contribute to a cloudy buildup on windows. Rain can cause existing filth to streak down the pane, leaving dark spots once the pool of water has evaporated. A seasonal cleaning can clear this hard-to-remove combination of grime and filth, particularly after months of closed windows, storms, and warm temperatures have made the glass look dull.",
+              "Spring pollen, summer dust, wind-driven rain, autumn leaves, and winter weather can all contribute to cloudy buildup on windows. Rain can carry existing grime down the pane and leave dark spots after droplets or standing water evaporate. Seasonal cleaning clears this stubborn combination of residue, particularly after months of closed windows and storms have left the glass looking dull.",
           },
           {
             title: "Sprinkler Spots and Hard Water Deposits",
@@ -434,7 +434,7 @@ export const locationPages = {
           {
             title: "Complete Care For Your Kentwood Home",
             body:
-              "Our residential window cleaning service can handle interior and exterior glass plus accessible frames and sills for a more extensive improvement. It’s a great opportunity for spring cleaning or getting the place ready for summer guests or an open house. We take care when working around furnishings, flooring, landscaping, painted surfaces, and other details so that panes both old and new get the same careful attention.",
+              "Our residential window cleaning service can handle interior and exterior glass plus frames and sills for a more extensive improvement. It’s a great opportunity for spring cleaning or getting the place ready for summer guests or an open house. We take care when working around furnishings, flooring, landscaping, painted surfaces, and other details so that panes both old and new get the same careful attention.",
           },
           {
             title: "Professional Cleaning For Your Kentwood Business",
@@ -456,7 +456,7 @@ export const locationPages = {
           {
             title: "Road Dust And Traffic Film On Windows",
             body:
-              "Major roadways like 28th Street, East Beltline Avenue, Broadmoor Avenue, and M-6 run through or along the edge of Kentwood. This means that residences and commercial buildings near these thoroughfares need to contend with dust and a gray film that develops on their glass. Exterior cleaning eliminates film from the surface of the glass and erases loose dust from the accessible parts of the frame and sill. This reduces glare through the glass and improves the appearance of the building both from within and in the street.",
+              "Major roadways like 28th Street, East Beltline Avenue, Broadmoor Avenue, and M-6 run through or along the edge of Kentwood. This means that residences and commercial buildings near these thoroughfares need to contend with dust and a gray film that develops on their glass. Exterior cleaning eliminates film from the surface of the glass and removes loose dust from frames and sills. This reduces glare through the glass and improves the appearance of the building both from within and from the street.",
           },
           {
             title: "Pollen, Rain, And Seasonal Spots On Glass",
@@ -515,7 +515,7 @@ export const locationPages = {
           {
             title: "Complete Care for Grandville Homes",
             body:
-              "Our residential cleaning includes interior and exterior glass, accessible frames and sills, for a truly comprehensive improvement. It's a practical choice for spring cleaning, preparing a home for sale or guests, or simply opening up rooms to natural light after a period of heavy use. We take care to avoid furnishings, flooring, landscaping, painted surfaces, and other finishes. Whether your home has traditional divided glass or large windows in a contemporary setting, we clean the elements that frame a room to make it come together.",
+              "Our residential cleaning includes interior and exterior glass, frames, and sills for a truly comprehensive improvement. It's a practical choice for spring cleaning, preparing a home for sale or guests, or simply opening up rooms to natural light after a period of heavy use. We take care to avoid furnishings, flooring, landscaping, painted surfaces, and other finishes. Whether your home has traditional divided glass or large windows in a contemporary setting, we clean the elements that frame a room to make it come together.",
           },
           {
             title: "Professional Cleaning for Grandville Businesses",
@@ -537,7 +537,7 @@ export const locationPages = {
           {
             title: "Road Dust and Traffic Film",
             body:
-              "Grandville has its share of roadways connecting downtown, residential centers, and RiverTown. Glass near frequently traveled roads and highways can accumulate fine dust and a gray film that obscures the view. Exterior cleaning removes this film from the pane and lifts dust from accessible frame and sill areas, restoring clarity both from within and on the outside.",
+              "Grandville has its share of roadways connecting downtown, residential centers, and RiverTown. Glass near frequently traveled roads and highways can accumulate fine dust and a gray film that obscures the view. Exterior cleaning removes this film from the pane and lifts dust from frame and sill areas, restoring clarity both from within and on the outside.",
           },
           {
             title: "Pollen, Rain, and Seasonal Spots",
@@ -591,22 +591,22 @@ export const locationPages = {
       {
         title: "How We Serve Allendale",
         intro:
-          "Window cleaning in Allendale should be a service tailored to the building, it's surroundings, and the people that enjoy them. Allendale is home to family owned properties, new developments, rental properties, student housing, corporate offices, businesses, and large expanses of land. Premier Window Care takes these variables into consideration while delivering a professional grade cleaning with quality tools and easy communication from estimate through completion.",
+          "Window cleaning in Allendale should be tailored to the building, its surroundings, and the people who use it. Allendale is home to family-owned properties, new developments, rentals, student housing, corporate offices, businesses, and large expanses of land. Premier Window Care considers these variables while delivering professional-grade cleaning with quality tools and clear communication from estimate through completion.",
         items: [
           {
             title: "Complete Care for Allendale's Residential Properties",
             body:
-              "Our team can provide interior, exterior, accessible interior and sill, or a combination for a more thorough residential clean. It's the kind of cleaning that makes sense for spring cleaning, preparing for an event, getting ready for a sale, or simply wanting to let the natural light shine through. We take the care to clean around your furniture, floorboards, landscaping, painted accents, and other finishes. Whether older established homes or newer developments with oversized windows, we'll bring attention to your home's details by cleaning what makes your rooms beautiful.",
+              "Our team can clean interior glass, exterior glass, frames and sills, or a combination for a more thorough residential service. It’s a practical choice for spring cleaning, preparing for an event or sale, or simply letting more natural light shine through. We work carefully around furniture, flooring, landscaping, painted accents, and other finishes. From established homes to newer developments with oversized windows, we give each property’s glass the attention it needs.",
           },
           {
             title: "Cleaning for Rentals and Local Businesses",
             body:
-              "Apartments, student housing, offices, shops, and other commercial buildings in Allendale all have one thing in common: beautiful glass for residents, customers, and employees to enjoy. We'll work around your building and it's access points to prepare all the windows, doors, and other glass surfaces for your next move-in, showing off your property one pane at a time. We handle the messes in between too with regular maintenance to keep fingerprints, roadways, and other outside elements from overpowering your displays.",
+              "Apartments, student housing, offices, shops, and other commercial buildings in Allendale all benefit from clean glass for residents, customers, and employees to enjoy. We work around the building and its access points to prepare windows, doors, and other glass surfaces for move-ins or everyday use. Regular maintenance also helps keep fingerprints, road grime, and outdoor residue from overpowering displays.",
           },
           {
             title: "Flexible Service for the Property",
             body:
-              "A family home can't be cleaned the same way as a busy rental or student property, a campus residence can't be treated like a business along Lake Michigan Drive, and a downtown storefront can't be cleaned the same way as a private home on a quiet street. With interior, exterior, commercial, and hard water cleaning, we can meet your building's specific needs so your glass gets the love it needs without overcommiting. That's why we're here to talk you through the choices and decide on a manageable schedule to keep your windows simple and beautiful.",
+              "A family home has different needs from a busy rental, student property, campus residence, or business along Lake Michigan Drive. With interior, exterior, commercial, and hard water cleaning, we can meet the building’s specific needs without overcommitting. We explain the options and help choose a manageable schedule that keeps the glass clear and cared for.",
           },
         ],
       },
@@ -618,12 +618,12 @@ export const locationPages = {
           {
             title: "Road, Field, and Construction Dust",
             body:
-              "Properties near roadways, open fields, or under construction are subject to the fine dust that settles on their glass year round. The cloudiness can build on the glass until it runs together, becoming hardest to ignore when the sun hits it or when looking out over a display. Exterior cleaning lifts that cloudiness from the panes, and we'll gently remove any loose bits from accessible parts of the frame and sill. This brings a lighter look to the home while making a rental, office, or storefront appear more welcoming from the parking lot.",
+              "Properties near roadways, open fields, or construction can collect fine dust on their glass year-round. The cloudiness builds gradually and becomes hardest to ignore when sunlight hits the pane or someone looks through a display. Exterior cleaning lifts that film from the glass and removes loose debris from frames and sills. This brightens a home while making a rental, office, or storefront more welcoming from the parking lot.",
           },
           {
             title: "Pollen, Rain, and Seasonal Grime",
             body:
-              "Pollens from springtime and fine dust from summer months stick to the wet glass and settle down into the tracks of the windowsill. Rainstorms and high winds compound the mess and, when it's cold enough, add to the grime that needs to be lifted off the glass. Rain doesn't always clear the messes from the glass, instead spreading them out and leaving streaks once the storm has passed. Seasonal cleaning clears the compounded mess that builds over months at a time, bringing natural light into earlier finished rooms after several weeks of storms, closed windows, and shifting weather patterns.",
+              "Spring pollen and fine summer dust stick to wet glass and collect around window edges. Rainstorms and high winds compound the mess, while colder weather adds more residue to the glass. Rain often spreads existing grime and leaves streaks after the storm passes. Seasonal cleaning removes buildup accumulated over several months and helps bring natural light back into rooms after weeks of storms, closed windows, and shifting weather.",
           },
           {
             title: "Hard Water and Sprinkler Spots",
@@ -633,11 +633,11 @@ export const locationPages = {
           {
             title: "Turnover, Upper Levels, Oversized Panes",
             body:
-              "A rental's turnover often leaves smudges, dust, and other marks on the inside of the glass while multi-story buildings or oversized panes can prove challenging to reach from the ground. Windows over landscaping, slopes, or other obstacles need an extra step to get to. We'll assess the building and the tools we can use before recommending a maintenance plan built around the property and it's access points. We can clean upper floors and lower ones, oversized panes and more traditional windows, all without asking the property to provide equipment with every pass.",
+              "Rental turnover often leaves smudges, dust, and other marks on interior glass, while multi-story buildings and oversized panes can be difficult to reach from the ground. Windows above landscaping, slopes, or other obstacles require additional planning. We assess the building and equipment needs before recommending a maintenance plan built around the property and its access points. We can clean upper and lower floors, oversized panes, and traditional windows without requiring the property to supply equipment.",
           },
         ],
         closing:
-          "Premier Window Care offers Allendale's home owners, rental managers, and businesses one time or ongoing cleaning services to reduce heavy buildup, make turnover simple, or help keep a commercial building beautiful to the public eye.",
+          "Premier Window Care offers Allendale homeowners, rental managers, and businesses one-time or ongoing cleaning services to reduce heavy buildup, simplify turnover, and keep commercial buildings presentable to the public.",
       },
       {
         title: "The Community of Allendale, Michigan",
@@ -647,7 +647,7 @@ export const locationPages = {
           {
             title: "A Community Along the Grand River",
             body:
-              "Allendale's township land was home to Indigenous Peoples and later French fur traders, and it was where Richard Roberts, the first permanent European settler, established a Half-way House in the Grand River in 1842. The Half-way House received it's name because it was approximately halfway between Grand Haven and Grandville. The Grand River and the surrounding areas of Allendale became a gathering place for those traveling along the river and trails.",
+              "Allendale Township was home to Indigenous peoples and later French fur traders. Richard Roberts, identified in local histories as the first permanent European settler, established a halfway house near the Grand River in 1842. The halfway house received its name because it was approximately midway between Grand Haven and Grandville. The Grand River and surrounding areas became gathering places for people traveling along the river and nearby trails.",
           },
           {
             title: "Home of Grand Valley State University",
@@ -657,7 +657,7 @@ export const locationPages = {
           {
             title: "Parks, Schools, Sports Facilities, and More",
             body:
-              "The 40 acre Allendale Community Park borders the Allendale Township offices, and the Grand River and the Grand River Park, as well as the Bass River State Recreation Area, are also nearby. Public and private schools are also dotting the township. In addition to the GVSU, the parks, natural areas, and schools, Allendale has many local shops and restaurants. Premier Window Care is proud to provide our community with exceptional window care on both residential and commercial buildings.",
+              "The 40-acre Allendale Community Park borders the Allendale Township offices. Grand River Park and the Bass River State Recreation Area are also nearby, and public and private schools serve the township. Along with GVSU, parks, natural areas, and schools, Allendale has many local shops and restaurants. Premier Window Care is proud to provide residential and commercial window care throughout the community.",
           },
         ],
       },
@@ -677,7 +677,7 @@ export const locationPages = {
           {
             title: "Complete Care for Zeeland Homes",
             body:
-              "Premier Window Care's residential cleaning can include interior glass, exterior glass, accessible frames, and sills for a more thorough improvement. It's a great time to bring more light into the home for spring cleaning or preparing for guests. Or, make a home more appealing for sale by removing the haze, grime, and film that can build up on glass surfaces. We'll take care to avoid damage to furnishings, flooring, landscaping, painted surfaces, and more. Whether they have traditional divided glass or larger windows in modern styles, homeowners can enjoy the quality and value of seeing all the details that make their rooms bright.",
+              "Premier Window Care's residential cleaning can include interior glass, exterior glass, frames, and sills for a more thorough improvement. It's a great time to bring more light into the home for spring cleaning or preparing for guests. Or, make a home more appealing for sale by removing the haze, grime, and film that can build up on glass surfaces. We'll take care to avoid damage to furnishings, flooring, landscaping, painted surfaces, and more. Whether they have traditional divided glass or larger windows in modern styles, homeowners can enjoy the quality and value of seeing all the details that make their rooms bright.",
           },
           {
             title: "Professional Cleaning for Zeeland Businesses",
@@ -758,7 +758,7 @@ export const locationPages = {
           {
             title: "Complete Care for Jenison Residences",
             body:
-              "Our residential cleaning services include interior and exterior glass, accessible frames and sills, for a thorough improvement. It's an excellent option for spring cleaning, preparing your home for sale, opening up your space to natural light, and restoring the view after months of dust and grime. We work around furnishings, flooring, landscaping, painted walls, and other features. We clean all the visible glass in your traditional divided or modern larger panes to help improve the whole room's brightness.",
+              "Our residential cleaning services include interior and exterior glass, frames, and sills for a thorough improvement. It's an excellent option for spring cleaning, preparing your home for sale, opening up your space to natural light, and restoring the view after months of dust and grime. We work around furnishings, flooring, landscaping, painted walls, and other features. We clean all the visible glass in your traditional divided or modern larger panes to help improve the whole room's brightness.",
           },
           {
             title: "Professional Cleaning for Jenison Businesses",
@@ -780,7 +780,7 @@ export const locationPages = {
           {
             title: "Road Dust and Traffic Film in Jenison",
             body:
-              "Jenison has many popular thoroughfares, including Baldwin Street, Cottonwood Drive, Chicago Drive, and the nearby commuting roads. Residents and businesses near these roads see fine dust on their glass when near heavy traffic. This film can build up over time and be noticeable when the sun strikes the worst spots or when the interior display faces an oncoming street. Exterior cleaning removes the cloudiness and loosens the film on sills and accessible parts of the frame. It brightens the view and improves the building's curb appeal.",
+              "Jenison has many popular thoroughfares, including Baldwin Street, Cottonwood Drive, Chicago Drive, and nearby commuting routes. Residents and businesses near heavy traffic can see fine dust and road grime collect on their glass. This film builds over time and becomes especially noticeable when sunlight strikes the pane. Exterior cleaning removes the cloudiness and loosens residue on sills and frames, brightening the view and improving curb appeal.",
           },
           {
             title: "Pollen, Rain, and Seasonal Grime",
@@ -839,7 +839,7 @@ export const locationPages = {
           {
             title: "Complete Care for Holland Homes",
             body:
-              "Our residential service can include interior, glass, accessible frames, and sills to truly open up your home to the spring weather, prepare for guests, empty a seasonal rental, or ready your home for sale. We clean around furnishings, flooring, and landscapes, inside and out. We can come in and detail your classic divided glass or take on the large expanses of glass looking out over the water. You'll see the difference it makes to let the sunshine in.",
+              "Our residential service can include interior glass, exterior glass, frames, and sills to open up your home to spring weather, prepare for guests, refresh a seasonal rental, or ready your home for sale. We work around furnishings, flooring, and landscaping inside and out. We can detail classic divided glass or clean large panes overlooking the water so more sunshine can come in.",
           },
           {
             title: "Professional Cleaning for Holland Businesses",

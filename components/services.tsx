@@ -8,12 +8,12 @@ import { servicePages } from "@/lib/site-pages"
 
 const memberships = [
   {
-    name: "One Time",
+    name: "One-time",
     savings: "No discount",
     cadence: "Single Cleaning",
     badge: null,
     benefits: [
-      "No touch ups in between service",
+      "No touch-ups between services.",
       "No screen cleaning",
       "No hard water removal",
     ],
@@ -24,7 +24,7 @@ const memberships = [
     cadence: "Per Cleaning",
     badge: "Best Value",
     benefits: [
-      "Free touch ups in between service",
+      "Free touch-ups between services.",
       "Screen cleaning",
       "Hard water removal",
     ],
@@ -35,7 +35,7 @@ const memberships = [
     cadence: "Per Cleaning",
     badge: null,
     benefits: [
-      "Free touch ups in between service",
+      "Free touch-ups between services.",
       "Screen cleaning",
       "Hard water removal",
     ],
@@ -126,12 +126,12 @@ export function MaintenancePlans() {
                 <li
                   key={benefit}
                   className={`flex gap-3 text-sm font-medium ${
-                    membership.name === "One Time"
+                    membership.name === "One-time"
                       ? "text-muted-foreground line-through"
                       : "text-foreground"
                   }`}
                 >
-                  {membership.name === "One Time" ? (
+                  {membership.name === "One-time" ? (
                     <XCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-muted-foreground" />
                   ) : (
                     <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-primary" />

@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Premier Window Care | Window Cleaning in Hudsonville, MI',
   description:
-    'Reliable window cleaning for homes and businesses in West Michigan. Crystal clear windows, streak-free guarantee, fully insured.',
+    'Reliable window cleaning for homes and businesses in West Michigan, backed by 30 five-star Google reviews. Crystal-clear results and fully insured service.',
 
   icons: {
     icon: [
@@ -100,6 +100,25 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className={`${inter.className} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              name: 'Premier Window Care',
+              url: 'https://cleanwithpremier.com',
+              telephone: '+1-616-422-4749',
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '5.0',
+                reviewCount: 30,
+                bestRating: '5',
+                worstRating: '1',
+              },
+            }),
+          }}
+        />
         {children}
         <Script id="tawk-to-agent" strategy="afterInteractive">
           {`

@@ -73,7 +73,7 @@ export function Hero() {
               ))}
             </div>
             <span className="text-sm font-semibold md:text-base">
-              5.0&nbsp;&nbsp;·&nbsp;&nbsp;30+ Google reviews
+              5.0&nbsp;&nbsp;·&nbsp;&nbsp;30 Google reviews
             </span>
           </div>
 

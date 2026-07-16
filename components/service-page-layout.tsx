@@ -18,14 +18,14 @@ const exteriorIncluded = [
   ["Sill cleaning", "Exterior sills are swept free of debris to help avoid future staining or buildup."],
   ["Screen check", "We inspect screens for visible dirt and debris. Deeper screen cleaning is available as an add-on or with a maintenance plan."],
   ["Edge and corner detailing", "We wash the places where a garden hose or DIY cleaning can leave traces of dirt behind."],
-  ["Final walk through", "Before we leave, we walk around the property and inspect every window to make sure everything looks perfect."],
+  ["Final walkthrough", "Before we leave, we walk around the property and inspect every window to make sure everything looks perfect."],
 ] as const
 
 const exteriorSigns = [
   "Your windows look cloudy, hazy, or dirty even after it rains.",
   "There’s a yellow-green pollen film on or around the sills.",
   "Your windows have white, chalky mineral deposits near sprinklers or in areas exposed to well water.",
-  "There are cobwebs or insects collecting around window corners and accessible frames.",
+  "There are cobwebs or insects collecting around window corners and frames.",
   "You can’t remember the last time your windows received a professional exterior cleaning.",
   "Photos of your home or storefront look murky because of reflective grime.",
 ] as const
@@ -40,9 +40,9 @@ const exteriorBenefits = [
 const exteriorSteps = [
   ["Access and buildup assessment", "We identify access needs and areas where heavy pollen, sprinkler spotting, or seasonal grime need extra attention during cleaning."],
   ["Exterior pane washing", "Professional cleaning techniques deliver sparkling results rather than glass that simply looks less dirty."],
-  ["Accessible frame and sill cleaning", "We clear away cobwebs, dust, and other debris so the rest of the window doesn’t get overlooked."],
+  ["Frame and sill cleaning", "We clear away cobwebs, dust, and other debris so the rest of the window doesn’t get overlooked."],
   ["Edge and corner detailing", "We target the areas that rushed cleaning can miss or leave dirty."],
-  ["Final walk through and review", "Before we leave, we walk around the property and inspect every window to make sure everything looks perfect."],
+  ["Final walkthrough and review", "Before we leave, we walk around the property and inspect every window to make sure everything looks perfect."],
 ] as const
 
 const exteriorSeasons = [
@@ -56,9 +56,9 @@ const interiorIncluded = [
   ["Interior glass washing", "Each pane of glass is hand-cleaned and squeegeed to a streak-free finish rather than receiving only a superficial wipe."],
   ["Glass edge detailing", "The edges of each pane are detailed after squeegeeing to remove drips and leave the glass with a finished appearance."],
   ["Smudge and haze removal", "Fingerprints, pet marks, and household film are removed so windows offer clear views in natural light."],
-  ["High touch detail cleaning", "The glass around handles and other frequent touch points receives special care to remove noticeable marks."],
+  ["High-touch detail cleaning", "The glass around handles and other frequent touch points receives special care to remove noticeable marks."],
   ["Furniture protection", "We work carefully around furnishings and flooring, moving what is necessary and returning it to its proper place after cleaning."],
-  ["Final walk through", "Before we leave, we walk around the property and inspect every window to make sure everything looks perfect."],
+  ["Final walkthrough", "Before we leave, we walk around the property and inspect every window to make sure everything looks perfect."],
 ] as const
 
 const interiorSigns = [
@@ -82,7 +82,7 @@ const interiorSteps = [
   ["Wash and squeegee each pane", "Every window is washed, squeegeed, and detailed along the edges to remove streaks, smudges, and haze."],
   ["Detail edges and corners", "We revisit the perimeter of each pane to remove drips and residue that can remain after washing and squeegeeing."],
   ["Protect furnishings throughout", "We take care throughout the process to protect furnishings and flooring from damage or unnecessary marking."],
-  ["Final walk through and review", "Before we leave, we walk around the property and inspect every window to make sure everything looks perfect."],
+  ["Final walkthrough and review", "Before we leave, we walk around the property and inspect every window to make sure everything looks perfect."],
 ] as const
 
 const interiorHomeFactors = [
@@ -97,7 +97,7 @@ const hardWaterCauses = [
   ["Roof and gutter runoff", "Water running from roofing materials or gutters can carry minerals onto the glass below."],
   ["Well water", "Well water often contains higher mineral levels that can leave visible deposits after repeated exposure."],
   ["Lake and river spray plus humidity", "Properties near West Michigan lakes and rivers may experience more frequent mineral exposure."],
-  ["Power washing overspray", "Power washing near unprotected windows can leave mineral rich droplets on the glass."],
+  ["Power-washing overspray", "Power washing near unprotected windows can leave mineral-rich droplets on the glass."],
 ] as const
 
 const hardWaterDifferences = [
@@ -135,7 +135,7 @@ const hardWaterPrevention = [
 ] as const
 
 const commercialProperties = [
-  ["Storefronts and retail", "Street level glass is often the first element potential customers see as they pass by your storefront."],
+  ["Storefronts and retail", "Street-level glass is often the first element potential customers see as they pass by your storefront."],
   ["Offices", "Exterior and interior glass cleaning can include entryways, customer facing glass, and conference room glass."],
   ["Restaurants and cafes", "Front glass can be washed on a rotating or recurring basis to keep the interior visible and appealing."],
   ["Property managers", "Recurring window cleaning can be arranged for multiple rental units, apartment buildings, or condominium properties through one point of contact."],
@@ -297,7 +297,7 @@ export function ServicePageLayout({ service }: ServicePageLayoutProps) {
 
           <section className="bg-white py-16 md:py-24">
             <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
-              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Focus on the problem</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Why This Service Is Beneficial</h2><p className="text-lg leading-relaxed text-muted-foreground">This specialty treatment is intended for glass exposed to sprinklers, roof runoff, or another source of mineral rich water. Treating the glass early can help prevent further damage and permanent etching.</p></div>
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Focus on the problem</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Why This Service Is Beneficial</h2><p className="text-lg leading-relaxed text-muted-foreground">This specialty treatment is intended for glass exposed to sprinklers, roof runoff, or another source of mineral-rich water. Treating the glass early can help prevent further damage and permanent etching.</p></div>
               <div className="grid gap-6 md:grid-cols-2">{hardWaterBenefits.map(([title, body], index) => <article key={title} className="grid gap-4 rounded-[2rem] border border-border p-6 shadow-sm md:grid-cols-[3rem_1fr] md:p-8"><span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-soft font-bold text-blue-primary">{index + 1}</span><div><h3 className="mb-3 text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></div></article>)}</div>
             </div></div>
           </section>

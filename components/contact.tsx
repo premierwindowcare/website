@@ -87,11 +87,12 @@ export function ContactForm({ className = "" }: { className?: string }) {
               <form onSubmit={handleSubmit} className="space-y-5">
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-1">
+                  <div className="space-y-1">
+                    <label htmlFor="firstName" className="block text-sm font-semibold text-gray-900">
                       First Name
                     </label>
                     <Input
+                      id="firstName"
                       name="firstName"
                       required
                       placeholder="John"
@@ -101,11 +102,12 @@ export function ContactForm({ className = "" }: { className?: string }) {
                     />
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-1">
+                  <div className="space-y-1">
+                    <label htmlFor="lastName" className="block text-sm font-semibold text-gray-900">
                       Last Name
                     </label>
                     <Input
+                      id="lastName"
                       name="lastName"
                       required
                       placeholder="Doe"
@@ -116,11 +118,12 @@ export function ContactForm({ className = "" }: { className?: string }) {
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-1">
+                <div className="space-y-1">
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-900">
                     Email
                   </label>
                   <Input
+                    id="email"
                     name="email"
                     type="email"
                     required
@@ -131,11 +134,12 @@ export function ContactForm({ className = "" }: { className?: string }) {
                   />
                 </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-1">
+                <div className="space-y-1">
+                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-900">
                     Phone
                   </label>
                   <Input
+                    id="phone"
                     name="phone"
                     type="tel"
                     required
@@ -146,11 +150,12 @@ export function ContactForm({ className = "" }: { className?: string }) {
                   />
                 </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-1">
+                <div className="space-y-1">
+                  <label htmlFor="address" className="block text-sm font-semibold text-gray-900">
                     Address
                   </label>
                   <Input
+                    id="address"
                     name="address"
                     required
                     placeholder="123 Main St, Grand Rapids, MI"
@@ -160,11 +165,12 @@ export function ContactForm({ className = "" }: { className?: string }) {
                   />
                 </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-1">
+                <div className="space-y-1">
+                  <label htmlFor="leadSource" className="block text-sm font-semibold text-gray-900">
                     How did you hear about us?
                   </label>
                   <select
+                    id="leadSource"
                     name="leadSource"
                     required
                     value={formData.leadSource}
@@ -187,11 +193,12 @@ export function ContactForm({ className = "" }: { className?: string }) {
                   </select>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-1">
+                <div className="space-y-1">
+                  <label htmlFor="details" className="block text-sm font-semibold text-gray-900">
                     Additional Details
                   </label>
                   <Textarea
+                    id="details"
                     name="details"
                     placeholder="Tell us about your windows, property type, or any special requirements..."
                     value={formData.details}
