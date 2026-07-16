@@ -134,11 +134,50 @@ const hardWaterPrevention = [
   "Pair treatment with a regular maintenance plan so new deposits can be addressed before they become a larger issue.",
 ] as const
 
+const commercialProperties = [
+  ["Storefronts and retail", "Street level glass is often the first element potential customers see as they pass by your storefront."],
+  ["Offices", "Exterior and interior glass cleaning can include entryways, customer facing glass, and conference room glass."],
+  ["Restaurants and cafes", "Front glass can be washed on a rotating or recurring basis to keep the interior visible and appealing."],
+  ["Property managers", "Recurring window cleaning can be arranged for multiple rental units, apartment buildings, or condominium properties through one point of contact."],
+  ["Small commercial buildings", "Medical offices, salons, and other customer facing buildings have unique presentation and service needs."],
+] as const
+
+const commercialIncluded = [
+  ["Exterior storefront and office glass", "Customer and street facing windows receive a full cleaning with attention to how the property looks from outside."],
+  ["Interior glass cleaning", "Interior service is available alongside exterior cleaning for a clear result on both sides of the glass."],
+  ["Frame and sill detailing", "Frames and sills are cleaned so the full window looks finished rather than only the glass."],
+  ["Entryway and door glass", "Frequently touched and highly visible entry glass is cleaned as a standard part of the visit."],
+  ["Recurring scheduling", "Weekly, biweekly, monthly, and quarterly plans can be built around the needs of your property."],
+  ["Flexible timing", "Visits can be scheduled in the morning, in the evening, or even outside of business hours to avoid disrupting customer traffic."],
+] as const
+
+const commercialBenefits = [
+  ["Customer ready presentation", "Commercial storefronts, offices, and other properties are cleaned with customer presentation in mind."],
+  ["Dependable service", "Exterior and interior washing of your property’s glass is provided to a consistently professional standard."],
+  ["Scheduling flexibility", "Visits can be arranged around your hours of operation and the general availability of your business."],
+  ["A brighter workspace", "Clean, clear glass allows natural light to brighten offices and other customer-facing areas."],
+] as const
+
+const commercialSteps = [
+  ["Confirm project needs", "We confirm the property needs, timing, and access before the job so your team knows what to expect and there are no surprises on cleaning day."],
+  ["Polish customer facing glass", "We clean the glass your customers can see, giving it a polished finish that makes the space shine and creates a crisp, clean presentation."],
+  ["Work around your schedule", "That might mean cleaning storefronts before they open, offices after they close, or sometime in between. Whatever works best with your day, we make it our priority."],
+  ["Review completed work", "At the completion of service, we review the cleaned areas so your space is ready for guests as soon as we leave."],
+] as const
+
+const commercialReasons = [
+  ["First impressions matter", "Potential customers form an impression before entering your storefront. Dirty, cloudy, or unkempt glass can detract from an otherwise impressive presentation."],
+  ["Consistent presentation builds trust", "Recurring commercial washing helps maintain a reliably clean appearance, especially for businesses whose regular customers notice changes over time."],
+  ["Natural light affects mood and perception", "Clean glass allows natural light into offices, retail spaces, and other customer-facing areas, helping them feel brighter and more welcoming."],
+  ["A visible return on investment", "Compared with many maintenance expenses, professional window cleaning provides an immediately visible result."],
+] as const
+
 export function ServicePageLayout({ service }: ServicePageLayoutProps) {
   const galleryImages = Array.from(new Set(service.galleryImages))
   const isExterior = service.slug === "exterior-window-cleaning"
   const isInterior = service.slug === "interior-window-cleaning"
   const isHardWater = service.slug === "hard-water-removal"
+  const isCommercial = service.slug === "commercial-window-cleaning"
 
   return (
     <main>
@@ -200,55 +239,44 @@ export function ServicePageLayout({ service }: ServicePageLayoutProps) {
         </div>
       </section>
 
-      {!isExterior && !isInterior && !isHardWater ? (
-      <section className="bg-blue-soft py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-5xl">
-            <div className="mb-10 max-w-3xl">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-blue-primary shadow-sm">
-                <CheckCircle2 className="h-4 w-4" />
-                What to Expect
-              </div>
-              <h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">
-                {service.cardTitle} That Feels Finished
-              </h2>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                {service.detailsIntro}
-              </p>
-            </div>
+      {isCommercial ? (
+        <>
+          <section className="bg-white py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Built around your property</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Who We Work With</h2><p className="text-lg leading-relaxed text-muted-foreground">Commercial window washing can take place across a variety of properties. We customize the timing and procedures around the needs of your business.</p></div>
+              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-5">{commercialProperties.map(([title, body]) => <article key={title} className="rounded-2xl border border-border bg-blue-soft p-6"><span className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-blue-primary text-white"><Check className="h-4 w-4" /></span><h3 className="mb-2 text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}</div>
+            </div></div>
+          </section>
 
-            <div className="grid gap-6 lg:grid-cols-[1fr_0.9fr]">
-              <div className="rounded-2xl border border-border bg-white p-6 shadow-lg md:p-8">
-                <h3 className="mb-5 text-2xl font-bold text-blue-deep">
-                  Why This Service Helps
-                </h3>
-                <div className="space-y-4">
-                  {service.detailHighlights.map((item) => (
-                    <div key={item} className="flex gap-3">
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-primary" />
-                      <p className="leading-relaxed text-foreground">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+          <section className="bg-blue-deep py-16 text-white md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-pale">A complete commercial cleaning</p><h2 className="mb-4 text-3xl font-bold md:text-4xl">What’s Included in Commercial Service</h2><p className="text-lg leading-relaxed text-white/75">Service is tailored to the glass, timing, and other recurring needs of your storefront, office, or customer-facing property.</p></div>
+              <div className="grid gap-x-10 gap-y-6 md:grid-cols-2">{commercialIncluded.map(([title, body]) => <article key={title} className="flex gap-4 border-t border-white/20 pt-6"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue-pale" /><div><h3 className="mb-2 text-xl font-bold text-white">{title}</h3><p className="leading-relaxed text-white/80">{body}</p></div></article>)}</div>
+            </div></div>
+          </section>
 
-              <div className="rounded-2xl border border-border bg-blue-deep p-6 text-white shadow-lg md:p-8">
-                <h3 className="mb-5 text-2xl font-bold">
-                  How We Handle It
-                </h3>
-                <div className="space-y-4">
-                  {service.processSteps.map((step) => (
-                    <div key={step} className="flex gap-3">
-                      <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-blue-pale" />
-                      <p className="leading-relaxed text-white/90">{step}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          <section className="bg-white py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Professional and practical</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Why This Service Helps</h2><p className="text-lg leading-relaxed text-muted-foreground">Commercial service keeps your property’s windows clean and appealing while remaining flexible to your team’s scheduling needs.</p></div>
+              <div className="grid gap-6 md:grid-cols-2">{commercialBenefits.map(([title, body], index) => <article key={title} className="grid gap-4 rounded-[2rem] border border-border p-6 shadow-sm md:grid-cols-[3rem_1fr] md:p-8"><span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-soft font-bold text-blue-primary">{index + 1}</span><div><h3 className="mb-3 text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></div></article>)}</div>
+            </div></div>
+          </section>
+
+          <section className="bg-blue-soft py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl rounded-[2rem] bg-white p-6 shadow-sm md:p-10 lg:p-12">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Our process</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">How We Handle It</h2><p className="text-lg leading-relaxed text-muted-foreground">Clear communication and planning ensure that your service is dependable and causes minimal disruption to your customers.</p></div>
+              <div>{commercialSteps.map(([title, body], index) => <article key={title} className="grid gap-4 border-t border-border py-6 md:grid-cols-[3rem_14rem_1fr] md:items-start"><span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-primary font-bold text-white">{index + 1}</span><h3 className="text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}</div>
+            </div></div>
+          </section>
+
+          <section className="bg-white py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">A detail customers notice</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Why Clean Windows Matter for Businesses</h2></div>
+              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">{commercialReasons.map(([title, body]) => <article key={title} className="rounded-2xl bg-blue-soft p-6"><h3 className="mb-3 text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}</div>
+              <div className="mt-8 rounded-2xl border border-blue-light/50 border-l-4 border-l-blue-primary bg-gradient-to-r from-blue-soft to-white p-6 shadow-sm md:flex md:items-center md:justify-between md:gap-8 md:p-8"><div><p className="mb-2 text-sm font-bold uppercase tracking-[0.15em] text-blue-primary">Keep your business appearing its best</p><p className="text-lg font-medium leading-relaxed text-blue-deep">Arrange a one-time commercial service or ask about a recurring schedule that fits your needs and budget.</p></div><Button asChild className="mt-5 w-full shrink-0 rounded-full bg-blue-primary text-white hover:bg-blue-sky md:mt-0 md:w-fit"><Link href="#contact">Request a Commercial Quote <ArrowRight className="ml-2 h-4 w-4" /></Link></Button></div>
+            </div></div>
+          </section>
+        </>
       ) : null}
 
       {isHardWater ? (
