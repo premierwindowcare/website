@@ -92,10 +92,53 @@ const interiorHomeFactors = [
   ["New construction", "Even newer homes can retain film or dust from the building process that normal household cleaning does not always remove."],
 ] as const
 
+const hardWaterCauses = [
+  ["Sprinkler overspray", "Sprinklers that repeatedly reach nearby windows can leave mineral deposits behind after the water evaporates."],
+  ["Roof and gutter runoff", "Water running from roofing materials or gutters can carry minerals onto the glass below."],
+  ["Well water", "Well water often contains higher mineral levels that can leave visible deposits after repeated exposure."],
+  ["Lake and river spray plus humidity", "Properties near West Michigan lakes and rivers may experience more frequent mineral exposure."],
+  ["Power washing overspray", "Power washing near unprotected windows can leave mineral rich droplets on the glass."],
+] as const
+
+const hardWaterDifferences = [
+  "Regular soap and squeegee cleaning will not remove established mineral deposits, no matter how many times it is repeated.",
+  "The longer deposits remain, the more likely they are to become permanent etching rather than a removable surface stain.",
+  "Common household cleaning products like vinegar and store brand glass cleaners will provide little to no improvement when attempting to remove hard water.",
+  "Professional hard water spot removal or glass restoration is needed to address this issue.",
+] as const
+
+const hardWaterBenefits = [
+  ["A focused treatment for mineral deposits", "A specialty treatment targets deposits that standard exterior window cleaning cannot effectively address."],
+  ["Helps avoid permanent etching", "The earlier deposits are treated, the less opportunity they have to etch into the glass."],
+  ["Improves the appearance of the glass", "Focusing directly on mineral deposits can dramatically reduce the appearance of water spots and similar staining."],
+  ["Realistic expectations", "A professional inspection helps determine what can be removed and whether any damage has become permanent."],
+] as const
+
+const hardWaterSteps = [
+  ["Assessment", "We identify the severity of the deposits and determine whether the glass needs this specialty service or standard exterior window cleaning."],
+  ["Severity test", "We assess whether deposits remain on the surface or have etched into the glass. This guides the treatment and the result that can realistically be achieved."],
+  ["Deposit focused treatment", "We use a detailed method that focuses directly on the mineral deposits rather than treating the glass like a standard cleaning."],
+  ["Exterior glass cleaning", "After addressing the deposits, we clean and review the exterior glass. We also identify any permanent etching that treatment could not remove."],
+] as const
+
+const hardWaterResults = [
+  ["Surface deposits", "These are typically greatly reduced or completely removed, depending on their severity."],
+  ["Etching that is just beginning", "Early etching can often be reduced significantly, although some marks may remain visible upon close inspection."],
+  ["Permanent etching", "Permanent damage will not respond like a surface deposit. We will make that clear during the assessment."],
+] as const
+
+const hardWaterPrevention = [
+  "Adjust sprinkler heads to avoid spraying the glass of your home.",
+  "Rinse nearby glass with clean water after power washing around the house.",
+  "Consider a water softener if you use well water and are dealing with mineral deposits on a large scale.",
+  "Pair treatment with a regular maintenance plan so new deposits can be addressed before they become a larger issue.",
+] as const
+
 export function ServicePageLayout({ service }: ServicePageLayoutProps) {
   const galleryImages = Array.from(new Set(service.galleryImages))
   const isExterior = service.slug === "exterior-window-cleaning"
   const isInterior = service.slug === "interior-window-cleaning"
+  const isHardWater = service.slug === "hard-water-removal"
 
   return (
     <main>
@@ -157,7 +200,7 @@ export function ServicePageLayout({ service }: ServicePageLayoutProps) {
         </div>
       </section>
 
-      {!isExterior && !isInterior ? (
+      {!isExterior && !isInterior && !isHardWater ? (
       <section className="bg-blue-soft py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl">
@@ -206,6 +249,53 @@ export function ServicePageLayout({ service }: ServicePageLayoutProps) {
           </div>
         </div>
       </section>
+      ) : null}
+
+      {isHardWater ? (
+        <>
+          <section className="bg-white py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Where spots come from</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">What Causes Hard Water Spots on Windows?</h2><p className="text-lg leading-relaxed text-muted-foreground">Hard water spots occur when water with high mineral levels evaporates on glass, leaving calcium, magnesium, and other deposits behind. Several common sources cause these deposits on West Michigan properties.</p></div>
+              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-5">{hardWaterCauses.map(([title, body]) => <article key={title} className="rounded-2xl border border-border bg-blue-soft p-6 lg:col-span-1"><span className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-blue-primary text-white"><Check className="h-4 w-4" /></span><h3 className="mb-2 text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}</div>
+            </div></div>
+          </section>
+
+          <section className="bg-blue-deep py-16 text-white md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+              <div><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-pale">More than just dirt</p><h2 className="mb-4 text-3xl font-bold md:text-4xl">Why Hard Water Stain Removal Is Different From Regular Cleaning</h2><p className="text-lg leading-relaxed text-white/75">While typical dirt and grime can be easily cleaned from glass surfaces during a regular window cleaning service, hard water deposits require something a little different.</p></div>
+              <div className="grid gap-5">{hardWaterDifferences.map((item) => <div key={item} className="flex gap-4 border-t border-white/20 pt-5"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue-pale" /><p className="leading-relaxed text-white/85">{item}</p></div>)}</div>
+            </div></div>
+          </section>
+
+          <section className="bg-white py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Focus on the problem</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Why This Service Is Beneficial</h2><p className="text-lg leading-relaxed text-muted-foreground">This specialty treatment is intended for glass exposed to sprinklers, roof runoff, or another source of mineral rich water. Treating the glass early can help prevent further damage and permanent etching.</p></div>
+              <div className="grid gap-6 md:grid-cols-2">{hardWaterBenefits.map(([title, body], index) => <article key={title} className="grid gap-4 rounded-[2rem] border border-border p-6 shadow-sm md:grid-cols-[3rem_1fr] md:p-8"><span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-soft font-bold text-blue-primary">{index + 1}</span><div><h3 className="mb-3 text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></div></article>)}</div>
+            </div></div>
+          </section>
+
+          <section className="bg-blue-soft py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl rounded-[2rem] bg-white p-6 shadow-sm md:p-10 lg:p-12">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Our process</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">How We Handle Hard Water Spot Removal</h2><p className="text-lg leading-relaxed text-muted-foreground">Every restoration project begins with a detailed assessment. Removing surface deposits is different from dealing with mineral damage that has already etched the glass.</p></div>
+              <div>{hardWaterSteps.map(([title, body], index) => <article key={title} className="grid gap-4 border-t border-border py-6 md:grid-cols-[3rem_14rem_1fr] md:items-start"><span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-primary font-bold text-white">{index + 1}</span><h3 className="text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}</div>
+            </div></div>
+          </section>
+
+          <section className="bg-white py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Realistic expectations</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">What You Should Know About the Possible Results</h2><p className="text-lg leading-relaxed text-muted-foreground">Most hard water deposits respond well to treatment when they have not permanently etched the glass. The existing condition determines how much clarity can be restored.</p></div>
+              <div className="grid gap-5 md:grid-cols-3">{hardWaterResults.map(([title, body], index) => <article key={title} className="rounded-2xl bg-blue-soft p-6"><span className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-white font-bold text-blue-primary shadow-sm">{index + 1}</span><h3 className="mb-3 text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}</div>
+              <div className="mt-8 rounded-2xl border border-blue-light/50 border-l-4 border-l-blue-primary bg-gradient-to-r from-blue-soft to-white p-6 shadow-sm md:p-8"><p className="mb-2 text-sm font-bold uppercase tracking-[0.15em] text-blue-primary">Earlier is better</p><p className="text-lg font-medium leading-relaxed text-blue-deep">Getting treatment early can make all the difference in how the glass looks after mineral deposits have been removed.</p></div>
+            </div></div>
+          </section>
+
+          <section className="bg-blue-soft py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+              <article className="rounded-[2rem] bg-white p-7 shadow-sm md:p-10"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Slowing the effects</p><h2 className="mb-6 text-2xl font-bold text-blue-deep md:text-3xl">Preventing Further Hard Water Damage</h2><div className="space-y-4">{hardWaterPrevention.map((item) => <div key={item} className="flex gap-3"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue-primary" /><p className="leading-relaxed text-foreground">{item}</p></div>)}</div></article>
+              <article className="flex flex-col rounded-[2rem] border border-blue-light/40 bg-white p-7 shadow-sm md:p-10"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Need just a simple cleaning?</p><h2 className="mb-4 text-2xl font-bold text-blue-deep md:text-3xl">Exterior Window Cleaning</h2><p className="mb-6 leading-relaxed text-foreground">If your glass simply has spots or film from pollen, dust, or rain, exterior window cleaning may be the right service for you.</p><Button asChild className="mt-auto w-full rounded-full bg-blue-primary text-white hover:bg-blue-sky sm:w-fit"><Link href="/exterior-window-cleaning">View Exterior Window Cleaning <ArrowRight className="ml-2 h-4 w-4" /></Link></Button></article>
+            </div></div>
+          </section>
+        </>
       ) : null}
 
       {isInterior ? (
