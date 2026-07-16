@@ -16,7 +16,7 @@ export const servicePages = [
       "Our interior window cleaning service helps homes and businesses in the Hudsonville, MI area enjoy brighter rooms, cleaner views, and a polished look from the inside out.",
     cardTitle: "Interior Window Cleaning",
     cardDescription:
-      "Detailed inside glass, frames, and sill cleaning for a brighter, cleaner home.",
+      "Detailed interior glass cleaning for a brighter view and a more finished room.",
     icon: Armchair,
     image: "/IMG_4360.webp",
     galleryImages: [
@@ -27,7 +27,7 @@ export const servicePages = [
     benefits: [
       "Removes fingerprints, dust, and everyday buildup",
       "Improves natural light throughout your space",
-      "Includes careful attention around frames and sills",
+      "Includes careful edge detailing for a polished finish",
       "Great for seasonal refreshes and special occasions",
       "Handled by a reliable, fully insured local team",
     ],
@@ -35,13 +35,13 @@ export const servicePages = [
       "Interior windows collect fingerprints, dust, pet marks, and haze that can make clean rooms feel unfinished. Premier brings a careful inside-window process that brightens your space without being disruptive.",
     detailHighlights: [
       "Interior glass is cleaned by hand so fingerprints, haze, and everyday marks are removed with a consistent finish.",
-      "Frames, edges, and accessible sill areas are checked so the entire window feels clean, not just the center of the pane.",
+      "Glass edges and corners are detailed after cleaning so drips and residue do not distract from the finished pane.",
       "We work carefully around furniture, flooring, and finished surfaces to keep the inside of your home respected throughout the visit.",
     ],
     processSteps: [
       "Before cleaning begins, we look over the interior windows and note any buildup, access needs, or delicate areas around the glass.",
       "Each pane is washed, squeegeed, and detailed along the edges to remove streaks, smudges, and the film that dulls natural light.",
-      "After the glass is cleaned, we review the windows from inside the room so the finished result looks bright, clear, and complete.",
+      "We review the windows from inside the room so the finished result looks bright, clear, and complete.",
     ],
   },
   {

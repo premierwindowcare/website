@@ -52,9 +52,50 @@ const exteriorSeasons = [
   ["Winter", "Road salt and slush can build up on the lowest parts of your windows, especially if you live near major roadways."],
 ] as const
 
+const interiorIncluded = [
+  ["Interior glass washing", "Each pane of glass is hand-cleaned and squeegeed to a streak-free finish rather than receiving only a superficial wipe."],
+  ["Glass edge detailing", "The edges of each pane are detailed after squeegeeing to remove drips and leave the glass with a finished appearance."],
+  ["Smudge and haze removal", "Fingerprints, pet marks, and household film are removed so windows offer clear views in natural light."],
+  ["High touch detail cleaning", "The glass around handles and other frequent touch points receives special care to remove noticeable marks."],
+  ["Furniture protection", "We work carefully around furnishings and flooring, moving what is necessary and returning it to its proper place after cleaning."],
+  ["Final walk through", "Before we leave, we walk around the property and inspect every window to make sure everything looks perfect."],
+] as const
+
+const interiorSigns = [
+  "Visible fingerprints or smudges have accumulated on interior glass.",
+  "Pet nose prints have left their mark on glass doors or low interior windows.",
+  "A cloudy film makes rooms feel less bright, even when the lights are on.",
+  "Streaks or white, hazy spots remain visible after wiping the glass.",
+  "Cooking residue or fireplace soot has caused cloudy buildup on kitchen or living room glass.",
+  "It has been more than six months since the inside of the windows was cleaned rather than dusted.",
+] as const
+
+const interiorBenefits = [
+  ["Protects your glass", "Regular cleaning prevents household film and residue from lingering on the glass and becoming more difficult to remove over time."],
+  ["Restores natural light", "Interior buildup reduces the natural light entering a room just as exterior grime does. Clean interior panes can noticeably brighten your space, especially in winter."],
+  ["Adds a finished appearance", "A sparkling room with dull or dirty windows can still feel incomplete. Clean interior glass helps bring the whole space together."],
+  ["Show home ready", "Whether you are showing a home, preparing for a party, or entertaining regularly, clear interior windows support a polished first impression."],
+] as const
+
+const interiorSteps = [
+  ["Walk the interior first", "Before beginning, we note buildup on the glass, access and safety concerns, furniture placement, flooring, and nearby surfaces."],
+  ["Wash and squeegee each pane", "Every window is washed, squeegeed, and detailed along the edges to remove streaks, smudges, and haze."],
+  ["Detail edges and corners", "We revisit the perimeter of each pane to remove drips and residue that can remain after washing and squeegeeing."],
+  ["Protect furnishings throughout", "We take care throughout the process to protect furnishings and flooring from damage or unnecessary marking."],
+  ["Final walk through and review", "Before we leave, we walk around the property and inspect every window to make sure everything looks perfect."],
+] as const
+
+const interiorHomeFactors = [
+  ["Winter window buildup", "With windows closed throughout the cold season, interior haze and dust can accumulate faster than usual, especially when heating circulates particles."],
+  ["Fireplaces and candles", "Wood burning and gas fireplaces, along with candles used during long winter nights, can contribute to buildup on interior glass."],
+  ["Pets and young children", "Nose prints, handprints, and other everyday marks tend to collect fastest on lower panes and glass doors."],
+  ["New construction", "Even newer homes can retain film or dust from the building process that normal household cleaning does not always remove."],
+] as const
+
 export function ServicePageLayout({ service }: ServicePageLayoutProps) {
   const galleryImages = Array.from(new Set(service.galleryImages))
   const isExterior = service.slug === "exterior-window-cleaning"
+  const isInterior = service.slug === "interior-window-cleaning"
 
   return (
     <main>
@@ -116,7 +157,7 @@ export function ServicePageLayout({ service }: ServicePageLayoutProps) {
         </div>
       </section>
 
-      {!isExterior ? (
+      {!isExterior && !isInterior ? (
       <section className="bg-blue-soft py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl">
@@ -165,6 +206,51 @@ export function ServicePageLayout({ service }: ServicePageLayoutProps) {
           </div>
         </div>
       </section>
+      ) : null}
+
+      {isInterior ? (
+        <>
+          <section className="bg-white py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">A complete clean</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">What Gets Done During an Interior Cleaning</h2><p className="text-lg leading-relaxed text-muted-foreground">Interior windows collect fingerprints, dust, pet marks, and haze that can leave even clean rooms feeling incomplete. We treat the panes and glass edges as parts of one finished result so every window looks genuinely complete.</p></div>
+              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                {interiorIncluded.map(([title, body]) => <article key={title} className="rounded-2xl border border-border bg-blue-soft p-6"><span className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-blue-primary text-white"><Check className="h-4 w-4" /></span><h3 className="mb-2 text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}
+              </div>
+            </div></div>
+          </section>
+
+          <section className="bg-blue-deep py-16 text-white md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+              <div><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-pale">Time for a cleaning?</p><h2 className="mb-4 text-3xl font-bold md:text-4xl">Signs Your Interior Windows Need Attention</h2><p className="text-lg leading-relaxed text-white/75">Interior buildup tends to develop gradually and subtly. These situations are clear signs that the glass needs to be cleaned rather than simply dusted.</p></div>
+              <div className="grid gap-x-8 gap-y-5 sm:grid-cols-2">{interiorSigns.map((sign) => <div key={sign} className="flex gap-4 border-t border-white/20 pt-5"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue-pale" /><p className="leading-relaxed text-white/85">{sign}</p></div>)}</div>
+            </div></div>
+          </section>
+
+          <section className="bg-white py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Beyond clean glass</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Why Interior Cleaning Is Important</h2></div>
+              <div className="grid gap-6 md:grid-cols-2">{interiorBenefits.map(([title, body], index) => <article key={title} className="grid gap-4 rounded-[2rem] border border-border p-6 shadow-sm md:grid-cols-[3rem_1fr] md:p-8"><span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-soft font-bold text-blue-primary">{index + 1}</span><div><h3 className="mb-3 text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></div></article>)}</div>
+            </div></div>
+          </section>
+
+          <section className="bg-blue-soft py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl rounded-[2rem] bg-white p-6 shadow-sm md:p-10 lg:p-12">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Our process</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">How We Do It</h2><p className="text-lg leading-relaxed text-muted-foreground">A conscientious process ensures thorough work while respecting the rooms, furnishings, and surfaces around each window.</p></div>
+              <div>{interiorSteps.map(([title, body], index) => <article key={title} className="grid gap-4 border-t border-border py-6 md:grid-cols-[3rem_14rem_1fr] md:items-start"><span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-primary font-bold text-white">{index + 1}</span><h3 className="text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}</div>
+            </div></div>
+          </section>
+
+          <section className="bg-white py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">What builds up inside</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Interior Cleaning for West Michigan Homes</h2><p className="text-lg leading-relaxed text-muted-foreground">Interior buildup does not follow the same seasonal pattern as outdoor grime, but several local factors contribute to it consistently in West Michigan.</p></div>
+              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">{interiorHomeFactors.map(([title, body]) => <article key={title} className="rounded-2xl bg-blue-soft p-6"><h3 className="mb-3 text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}</div>
+            </div></div>
+          </section>
+
+          <section className="bg-blue-soft py-16 md:py-24">
+            <div className="container mx-auto px-4"><article className="mx-auto flex max-w-5xl flex-col rounded-[2rem] bg-white p-7 shadow-sm md:p-10"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Inside or outside?</p><h2 className="mb-4 text-2xl font-bold text-blue-deep md:text-3xl">Interior vs. Exterior Window Cleaning</h2><p className="mb-4 leading-relaxed text-foreground">Interior cleaning takes care of fingerprints, pet marks, dust, and haze from inside the home. Exterior cleaning focuses on pollen, rain spots, hard water, and the effects of weather on the outside of the glass.</p><p className="mb-6 leading-relaxed text-foreground">Both types of buildup matter, and many customers choose interior and exterior cleaning during the same visit for a clear result on both sides of the glass.</p><Button asChild className="w-full rounded-full bg-blue-primary text-white hover:bg-blue-sky sm:w-fit"><Link href="/exterior-window-cleaning">View Exterior Window Cleaning <ArrowRight className="ml-2 h-4 w-4" /></Link></Button></article></div>
+          </section>
+        </>
       ) : null}
 
       {isExterior ? (
