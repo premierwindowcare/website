@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Premier Window Care | Window Cleaning in Hudsonville, MI',
   description:
-    'Reliable window cleaning for homes and businesses in West Michigan, backed by 30 five-star Google reviews. Crystal-clear results and fully insured service.',
+    'Reliable window cleaning for homes and businesses in West Michigan, backed by 37+ five-star Google reviews. Crystal-clear results and fully insured service.',
 
   icons: {
     icon: [
@@ -112,7 +112,7 @@ export default function RootLayout({
               aggregateRating: {
                 '@type': 'AggregateRating',
                 ratingValue: '5.0',
-                reviewCount: 30,
+                reviewCount: 37,
                 bestRating: '5',
                 worstRating: '1',
               },
