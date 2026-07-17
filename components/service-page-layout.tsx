@@ -172,12 +172,52 @@ const commercialReasons = [
   ["A visible return on investment", "Compared with many maintenance expenses, professional window cleaning provides an immediately visible result."],
 ] as const
 
+const screenIncluded = [
+  ["Screen removal and inspection", "Screens are carefully removed from the frame and checked for damage, tears, or wear before cleaning."],
+  ["Mesh washing", "Dust, pollen, and grime are worked out of the mesh itself rather than simply being brushed off."],
+  ["Frame wipe down", "Screen frames are cleaned along with the mesh to create a finished result."],
+  ["Track and channel cleaning", "With the screen out of the way, we clean the channel of the track to improve its functionality."],
+  ["Reinstallation", "Once your screen has been cleaned, we check that it fits properly before reinstalling it rather than simply pushing it back in place."],
+  ["Damage notes", "If a screen has a tear, bent frame, or another issue cleaning cannot fix, we point it out instead of reinstalling it without explanation."],
+] as const
+
+const screenSigns = [
+  "Your view is cloudy or dull despite having just had the glass cleaned.",
+  "You can see specks of pollen or dust in the screen mesh, especially in direct sunlight.",
+  "Your screens feel gritty or leave a film on your fingertips when touched.",
+  "Your open windows appear to let in less air than usual.",
+  "It has been more than a year since your screens were professionally cleaned.",
+] as const
+
+const screenBenefits = [
+  ["Protects your window washing", "A dirty screen next to freshly cleaned glass can make the pane appear dusty as pollen and other particles collect in the mesh and brush back against the glass."],
+  ["Improves airflow", "Dust and pollen caught in the screen can restrict airflow and make it seem as though open windows are not letting in as much fresh air."],
+  ["Reduces indoor allergens", "Pollen and other allergens trapped in screens can make fresh air less inviting when the weather allows you to open the windows."],
+  ["Finishes your cleaning job", "Clean glass with a dirty screen can look incomplete. Removing buildup from the mesh helps the entire window feel properly finished."],
+] as const
+
+const screenSteps = [
+  ["Remove and inspect", "We remove each screen and inspect it for damage before proceeding."],
+  ["Wash the mesh and frame", "The mesh is washed rather than simply brushed, and the frame is scrubbed down at the same time."],
+  ["Clean the track", "While the screen is out, we clean the track channel, an area often overlooked."],
+  ["Reinstall the screen", "We check that the screen fits correctly before reinstalling it."],
+  ["Note any damage", "If a screen is beyond what cleaning can restore, we note the issue so there are no assumptions about the mesh’s condition."],
+] as const
+
+const screenSeasons = [
+  ["Spring", "Pollen sticks to screens throughout the pollinating season, filling the mesh with airborne particles the glass would typically keep out."],
+  ["Summer", "Dust and other debris accumulate most on screened porches and patios, especially those facing lawns, gravel roads, or busy streets."],
+  ["Fall", "Leaves, seeds, and other plant matter often find their way into screen corners and edges during autumn."],
+  ["Winter", "Windows usually remain closed through winter, allowing the previous fall’s screen buildup to linger until the next cleaning."],
+] as const
+
 export function ServicePageLayout({ service }: ServicePageLayoutProps) {
   const galleryImages = Array.from(new Set(service.galleryImages))
   const isExterior = service.slug === "exterior-window-cleaning"
   const isInterior = service.slug === "interior-window-cleaning"
   const isHardWater = service.slug === "hard-water-removal"
   const isCommercial = service.slug === "commercial-window-cleaning"
+  const isScreen = service.slug === "screen-cleaning"
 
   return (
     <main>
@@ -238,6 +278,53 @@ export function ServicePageLayout({ service }: ServicePageLayoutProps) {
           </div>
         </div>
       </section>
+
+      {isScreen ? (
+        <>
+          <section className="bg-white py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">A complete clean</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">What to Expect With Screen Cleaning</h2><p className="text-lg leading-relaxed text-muted-foreground">The screen is one of the most overlooked parts of a window. Dust, pollen, and grime work their way into the mesh, dulling views and making clean glass appear dirty. We remove this buildup to restore the complete window to beautiful clarity.</p></div>
+              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">{screenIncluded.map(([title, body]) => <article key={title} className="rounded-2xl border border-border bg-blue-soft p-6"><span className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-blue-primary text-white"><Check className="h-4 w-4" /></span><h3 className="mb-2 text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}</div>
+            </div></div>
+          </section>
+
+          <section className="bg-blue-deep py-16 text-white md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+              <div><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-pale">Time for a cleaning?</p><h2 className="mb-4 text-3xl font-bold md:text-4xl">Indicators That Your Screens Need Cleaning</h2><p className="text-lg leading-relaxed text-white/75">Screen buildup can appear gradually, but these are telltale signs that cleaning is overdue.</p></div>
+              <div className="grid gap-x-8 gap-y-5 sm:grid-cols-2">{screenSigns.map((sign) => <div key={sign} className="flex gap-4 border-t border-white/20 pt-5"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue-pale" /><p className="leading-relaxed text-white/85">{sign}</p></div>)}</div>
+            </div></div>
+          </section>
+
+          <section className="bg-white py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Beyond beauty</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">The Benefits of Screen Cleaning</h2></div>
+              <div className="grid gap-6 md:grid-cols-2">{screenBenefits.map(([title, body], index) => <article key={title} className="grid gap-4 rounded-[2rem] border border-border p-6 shadow-sm md:grid-cols-[3rem_1fr] md:p-8"><span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-soft font-bold text-blue-primary">{index + 1}</span><div><h3 className="mb-3 text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></div></article>)}</div>
+            </div></div>
+          </section>
+
+          <section className="bg-blue-soft py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl rounded-[2rem] bg-white p-6 shadow-sm md:p-10 lg:p-12">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Our process</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">How We Perform Screen Cleaning</h2><p className="text-lg leading-relaxed text-muted-foreground">Thorough removal, mesh washing, and reinstallation ensure that every part of the screen is addressed while minimizing the risk of damage.</p></div>
+              <div>{screenSteps.map(([title, body], index) => <article key={title} className="grid gap-4 border-t border-border py-6 md:grid-cols-[3rem_14rem_1fr] md:items-start"><span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-primary font-bold text-white">{index + 1}</span><h3 className="text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}</div>
+            </div></div>
+          </section>
+
+          <section className="bg-white py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
+              <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Plan around the weather</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Screen Cleaning Through West Michigan’s Seasons</h2><p className="text-lg leading-relaxed text-muted-foreground">The kinds of buildup that appear on screens can vary drastically depending on the time of year.</p></div>
+              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">{screenSeasons.map(([season, body]) => <article key={season} className="rounded-2xl bg-blue-soft p-6"><h3 className="mb-3 text-2xl font-bold text-blue-deep">{season}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}</div>
+              <div className="mt-8 rounded-2xl border border-blue-light/50 border-l-4 border-l-blue-primary bg-gradient-to-r from-blue-soft to-white p-6 shadow-sm md:p-8"><p className="mb-2 text-sm font-bold uppercase tracking-[0.15em] text-blue-primary">A more frequent cleaning schedule</p><h3 className="mb-2 text-xl font-bold text-blue-deep">Why Screen Cleaning Is Offered With Quarterly and Biannual Maintenance Plans</h3><p className="text-lg font-medium leading-relaxed text-blue-deep">While annual cleaning is adequate for many tasks, screens cleaned only once a year tend to show visible buildup long before the next appointment arrives.</p></div>
+            </div></div>
+          </section>
+
+          <section className="bg-blue-soft py-16 md:py-24">
+            <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
+              <div className="mb-8 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Complete the window</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Add Screen Cleaning to Interior or Exterior Service</h2><p className="text-lg leading-relaxed text-muted-foreground">Screen cleaning complements interior and exterior window washing because the screen sits between the two surfaces. It is available as an add-on with quarterly and biannual maintenance plans or can be requested separately with a one-time cleaning.</p></div>
+              <div className="flex flex-col gap-4 sm:flex-row"><Button asChild className="rounded-full bg-blue-primary text-white hover:bg-blue-sky"><Link href="/exterior-window-cleaning">View Exterior Window Cleaning <ArrowRight className="ml-2 h-4 w-4" /></Link></Button><Button asChild variant="outline" className="rounded-full border-blue-primary text-blue-primary hover:bg-white"><Link href="/interior-window-cleaning">View Interior Window Cleaning <ArrowRight className="ml-2 h-4 w-4" /></Link></Button></div>
+            </div></div>
+          </section>
+        </>
+      ) : null}
 
       {isCommercial ? (
         <>

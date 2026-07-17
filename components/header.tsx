@@ -6,7 +6,7 @@ import { ChevronDown, Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { HashLink } from "@/components/hash-link"
-import { cityHref, serviceCities, servicePages } from "@/lib/site-pages"
+import { cityHref, orderedServicePages, serviceCities } from "@/lib/site-pages"
 
 type NavLink = {
   href: `/#${string}`
@@ -74,7 +74,7 @@ export function Header() {
                     >
                       All Services
                     </HashLink>
-                    {servicePages.map((service) => (
+                    {orderedServicePages.map((service) => (
                       <Link
                         key={service.slug}
                         href={`/${service.slug}`}
@@ -183,7 +183,7 @@ export function Header() {
                 Services
               </HashLink>
               <div className="mt-2 grid gap-1 border-l border-border pl-4">
-                {servicePages.map((service) => (
+                {orderedServicePages.map((service) => (
                   <Link
                     key={service.slug}
                     href={`/${service.slug}`}

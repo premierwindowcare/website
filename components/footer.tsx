@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Phone, Mail } from "lucide-react"
 import { HashLink } from "@/components/hash-link"
-import { cityHref, serviceCities, servicePages } from "@/lib/site-pages"
+import { cityHref, orderedServicePages, serviceCities } from "@/lib/site-pages"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -39,11 +39,17 @@ export function Footer() {
               <HashLink href="/#services" className="text-white/70 hover:text-white transition-colors text-sm">
                 Services
               </HashLink>
+              <HashLink href="/#maintenance-plans" className="text-white/70 hover:text-white transition-colors text-sm">
+                Maintenance Plans
+              </HashLink>
               <HashLink href="/#why-us" className="text-white/70 hover:text-white transition-colors text-sm">
                 Why Us
               </HashLink>
               <HashLink href="/#reviews" className="text-white/70 hover:text-white transition-colors text-sm">
                 Reviews
+              </HashLink>
+              <HashLink href="/#faq" className="text-white/70 hover:text-white transition-colors text-sm">
+                FAQ
               </HashLink>
               <HashLink href="/#service-area" className="text-white/70 hover:text-white transition-colors text-sm">
                 Service Area
@@ -57,7 +63,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Services</h4>
             <nav className="flex flex-col gap-2">
-              {servicePages.map((service) => (
+              {orderedServicePages.map((service) => (
                 <Link
                   key={service.slug}
                   href={`/${service.slug}`}

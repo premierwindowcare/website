@@ -1,4 +1,4 @@
-import { Armchair, Building2, Droplets, House, MapPin } from "lucide-react"
+import { Armchair, Building2, Droplets, Grid2X2, House, MapPin } from "lucide-react"
 
 export const phoneNumber = "(616) 422-4749"
 export const phoneHref = "tel:6164224749"
@@ -161,7 +161,58 @@ export const servicePages = [
       "After the work is complete, we review the cleaned areas so your storefront, office, or business space is ready to welcome people.",
     ],
   },
+  {
+    slug: "screen-cleaning",
+    title: "Screen Cleaning",
+    metaTitle: "Screen Cleaning | Premier Window Care",
+    metaDescription:
+      "Professional window screen cleaning in the Hudsonville, MI area. Remove dust, pollen, and buildup for clearer views and better airflow.",
+    summary:
+      "Our screen cleaning service takes dust, pollen, and grime off window screens across the Hudsonville, MI area, leaving you with sparkling views and fresh air.",
+    cardTitle: "Screen Cleaning",
+    cardDescription:
+      "Clear dust, pollen, and grime from screen mesh for a cleaner view and better airflow.",
+    icon: Grid2X2,
+    image: "/20260713_131031.jpg",
+    galleryImages: [
+      "/20260713_131031.jpg",
+      "/IMG_4107.png",
+      "/20260713_143839.jpg",
+    ],
+    benefits: [
+      "Removes pollen, dust, and grime from screen mesh",
+      "Helps fresh air move more freely through open windows",
+      "Keeps dirty screens from dulling freshly cleaned glass",
+      "Includes careful removal, inspection, and reinstallation",
+      "Pairs naturally with interior or exterior window cleaning",
+    ],
+    detailsIntro:
+      "Screens collect airborne dust, pollen, and grime that can dull the view and make clean windows look unfinished. A detailed screen cleaning helps the whole window look and function better.",
+    detailHighlights: [
+      "Screen mesh and frames are washed to remove trapped outdoor buildup.",
+      "Tracks and channels are cleared while the screens are removed.",
+      "Each screen is inspected, reinstalled, and checked for proper fit.",
+    ],
+    processSteps: [
+      "We carefully remove and inspect each screen before cleaning begins.",
+      "The mesh and frame are washed, and the screen channel is cleared of debris.",
+      "Screens are reinstalled correctly and any visible damage is brought to your attention.",
+    ],
+  },
 ] as const
+
+const serviceDisplayOrder = [
+  "interior-window-cleaning",
+  "exterior-window-cleaning",
+  "screen-cleaning",
+  "hard-water-removal",
+  "commercial-window-cleaning",
+] as const
+
+export const orderedServicePages = [...servicePages].sort(
+  (a, b) =>
+    serviceDisplayOrder.indexOf(a.slug) - serviceDisplayOrder.indexOf(b.slug),
+)
 
 export const serviceCities = [
   "Hudsonville",

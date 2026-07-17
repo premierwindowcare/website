@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, CheckCircle2, XCircle } from "lucide-react"
-import { servicePages } from "@/lib/site-pages"
+import { orderedServicePages } from "@/lib/site-pages"
 
 const memberships = [
   {
@@ -44,8 +44,8 @@ const memberships = [
 
 export function ServiceCards() {
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-      {servicePages.map((service) => (
+    <div className="grid gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-5">
+      {orderedServicePages.map((service) => (
         <Link
           key={service.slug}
           href={`/${service.slug}`}

@@ -17,6 +17,7 @@ module.exports = {
   additionalPaths: async (config) => {
     const homepageSections = [
       '/#services',
+      '/#maintenance-plans',
       '/#why-us',
       '/#reviews',
       '/#service-area',
