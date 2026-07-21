@@ -110,6 +110,15 @@ export function Footer() {
               </a>
             </div>
 
+            <nav aria-label="Legal" className="mt-5 flex flex-col gap-2">
+              <Link href="/privacy-policy" className="text-white/70 hover:text-white transition-colors text-sm">
+                Privacy Policy
+              </Link>
+              <Link href="/terms-of-service" className="text-white/70 hover:text-white transition-colors text-sm">
+                Terms of Service
+              </Link>
+            </nav>
+
             <div className="mt-5 aspect-square w-full max-w-44 overflow-hidden rounded-xl border border-white/15 bg-white/5 shadow-lg">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d268387.4018387342!2d-86.22790670154734!3d42.90346464779628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6dcf1b3e3a118483%3A0x27e984a22b749c13!2sPremier%20Window%20Care!5e1!3m2!1sen!2sus!4v1781732019464!5m2!1sen!2sus"

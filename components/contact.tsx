@@ -216,6 +216,10 @@ export function ContactForm({ className = "" }: { className?: string }) {
                   <Send className="w-5 h-5 ml-2" />
                 </Button>
 
+                <p className="text-center text-xs leading-5 text-muted-foreground">
+                  By providing your phone number, you agree to receive text messages from Premier Window Care about appointments, follow-ups, billing, and promotions. Message frequency varies. Message and data rates may apply. Reply STOP to opt out.
+                </p>
+
               </form>
             )}
 
