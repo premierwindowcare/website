@@ -109,6 +109,14 @@ export default function RootLayout({
               name: 'Premier Window Care',
               url: 'https://cleanwithpremier.com',
               telephone: '+1-616-422-4749',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: '4672 40th Ave',
+                addressLocality: 'Hudsonville',
+                addressRegion: 'MI',
+                postalCode: '49426',
+                addressCountry: 'US',
+              },
               aggregateRating: {
                 '@type': 'AggregateRating',
                 ratingValue: '5.0',

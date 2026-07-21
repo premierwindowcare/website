@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, Mail } from "lucide-react"
+import { Instagram, Mail, Phone } from "lucide-react"
 import { HashLink } from "@/components/hash-link"
 import { cityHref, orderedServicePages, serviceCities } from "@/lib/site-pages"
 
@@ -30,6 +30,37 @@ export function Footer() {
             <p className="text-white/70 text-sm leading-relaxed max-w-xs">
               Reliable window cleaning for homes and businesses across West Michigan.
             </p>
+
+            <div className="mt-5">
+              <p className="mb-3 text-sm font-semibold text-white">Follow Us</p>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61590872960711"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Follow Premier Window Care on Facebook"
+                  className="flex size-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white hover:text-blue-deep"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true" className="size-5 fill-current">
+                    <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8h3.4Z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.instagram.com/premierwindowcare/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Follow Premier Window Care on Instagram"
+                  className="flex size-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white hover:text-blue-deep"
+                >
+                  <Instagram className="size-4" />
+                </a>
+              </div>
+            </div>
+
+            <address className="mt-5 not-italic text-sm leading-6 text-white/70">
+              4672 40th Ave<br />
+              Hudsonville, MI 49426
+            </address>
           </div>
 
           {/* Quick Links */}
