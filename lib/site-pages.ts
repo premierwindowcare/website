@@ -97,11 +97,11 @@ export const servicePages = [
     cardDescription:
       "Remove stubborn mineral buildup before it etches into the glass.",
     icon: Droplets,
-    image: "/generated-hard-water-window.png",
+    image: "/20260724_091121.jpg",
     galleryImages: [
-      "/generated-hard-water-window.png",
-      "/generated-hard-water-exterior-before.png",
-      "/generated-hard-water-exterior-after.png",
+      "/20260724_091121.jpg",
+      "/20260724_105113.jpg",
+      "/20260724_091112.jpg",
     ],
     benefits: [
       "Reduces cloudy mineral spotting on glass",
