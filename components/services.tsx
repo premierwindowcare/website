@@ -61,10 +61,6 @@ export function ServiceCards() {
           </div>
 
           <div className="p-6 md:p-8">
-            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-blue-primary to-blue-sky">
-              <service.icon className="h-5 w-5 text-white" />
-            </div>
-
             <h3 className="text-xl font-bold text-blue-deep mb-3 group-hover:text-blue-primary transition-colors">
               {service.cardTitle}
             </h3>
