@@ -14,6 +14,11 @@ const faqs = [
       "Not usually. Rainwater does not cause most spotting by itself. Spots usually come from dust, pollen, sprinkler minerals, or grime that was already on the glass or surrounding surfaces.",
   },
   {
+    question: "What is the 7 Day Rain Guarantee?",
+    answer:
+      "If windows cleaned during a scheduled maintenance visit get dirty within 7 days of our cleaning, we’ll clean them again for free. This covers the windows and services included in your original cleaning.",
+  },
+  {
     question: "What is pure water window cleaning?",
     answer:
       "Pure water cleaning uses filtered water with minerals removed, so exterior glass can dry clear without soap residue. It is especially helpful for upper windows and larger exterior panes.",
@@ -34,9 +39,9 @@ const faqs = [
       "You do not need to remove them ahead of time unless you prefer to. If screens are part of the service, we can handle them during the appointment and make sure they are put back carefully.",
   },
   {
-    question: "Is screen cleaning included with every visit?",
+    question: "Is screen cleaning included with my service?",
     answer:
-      "Screen cleaning is included with Premier Maintenance Plans. For one-time cleanings, we can talk through screen needs during the quote so you know exactly what is included before scheduling.",
+      "Screen cleaning is an optional add-on for maintenance plans and one-time cleanings. We can talk through your screen needs during the quote so you know exactly what is included before scheduling.",
   },
   {
     question: "How often should West Michigan homes schedule window cleaning?",

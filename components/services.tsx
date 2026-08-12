@@ -14,7 +14,7 @@ const memberships = [
     badge: null,
     benefits: [
       "No touch-ups between services.",
-      "No screen cleaning",
+      "7 Day Rain Guarantee",
       "No hard water removal",
     ],
   },
@@ -25,7 +25,7 @@ const memberships = [
     badge: "Best Value",
     benefits: [
       "Free touch-ups between services.",
-      "Screen cleaning",
+      "7 Day Rain Guarantee",
       "Hard water removal",
     ],
   },
@@ -36,7 +36,7 @@ const memberships = [
     badge: null,
     benefits: [
       "Free touch-ups between services.",
-      "Screen cleaning",
+      "7 Day Rain Guarantee",
       "Hard water removal",
     ],
   },
