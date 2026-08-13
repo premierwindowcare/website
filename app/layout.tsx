@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Premier Window Care | Window Cleaning in Hudsonville, MI',
   description:
-    'Reliable window cleaning for homes and businesses in West Michigan, backed by 37+ five-star Google reviews. Crystal-clear results and fully insured service.',
+    'Reliable window cleaning for homes and businesses in West Michigan, backed by 50+ five-star Google reviews. Crystal-clear results and fully insured service.',
 
   icons: {
     icon: [

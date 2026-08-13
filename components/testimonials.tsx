@@ -6,6 +6,78 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 export function Reviews() {
   const reviews = [
     {
+      name: "Tricia Alcamo",
+      location: "Google Review",
+      quote: "Very professional and windows look great!",
+      rating: 5,
+    },
+    {
+      name: "Mackenzie Wellman",
+      location: "Google Review",
+      quote: "Amazing! Very meticulous. Will use them again.",
+      rating: 5,
+    },
+    {
+      name: "Kathie Cope",
+      location: "Google Review",
+      quote: "Drew and his crew did an amazing job! Will use his company again.",
+      rating: 5,
+    },
+    {
+      name: "Terri F",
+      location: "Google Review",
+      quote: "These two did a GREAT job! Polite, professional, I would highly recommend them to anyone who is interested!",
+      rating: 5,
+    },
+    {
+      name: "Isabella Vruggink (Issi)",
+      location: "Google Review",
+      quote: "Great price.",
+      rating: 5,
+    },
+    {
+      name: "Greg Edmunds",
+      location: "Google Review",
+      quote: "Job well done.",
+      rating: 5,
+    },
+    {
+      name: "Ed Michalak",
+      location: "Google Review",
+      quote: "Drew was promptly on time, friendly, courteous, and respectful.",
+      rating: 5,
+    },
+    {
+      name: "Kathy Westendorp",
+      location: "Google Review",
+      quote: "Wonderful job on our church's exterior windows (Hopkins Community Church)!",
+      rating: 5,
+    },
+    {
+      name: "Rick Strosnider",
+      location: "Google Review",
+      quote: "Drew did a great job. Will have back in the spring.",
+      rating: 5,
+    },
+    {
+      name: "Carol Brzezinski",
+      location: "Google Review",
+      quote: "Great price.",
+      rating: 5,
+    },
+    {
+      name: "Ryan Molenkamp",
+      location: "Google Review",
+      quote: "Premier Window Care did an amazing job on our windows. We had some stubborn buildup, and Drew completely cleared it.",
+      rating: 5,
+    },
+    {
+      name: "Isaiah Murphy",
+      location: "Google Review",
+      quote: "Great job highly recommend!",
+      rating: 5,
+    },
+    {
       name: "Candace Molenkamp",
       location: "Google Review",
       quote: "Our windows look great! We are so happy with how they turned out.",
@@ -25,28 +97,10 @@ export function Reviews() {
       rating: 5,
     },
     {
-      name: "Digvijay Singh",
-      location: "Google Review",
-      quote: "Reasonable price.",
-      rating: 5,
-    },
-    {
       name: "Walter",
       location: "Google Review",
       quote:
         "Did a great job and was able to clean the windows that I find hard to reach. The serviceman arrived at the appointed time and was done with the entire exterior within a couple of hours. Now I can do something other than clean windows on a Saturday afternoon.",
-      rating: 5,
-    },
-    {
-      name: "Amanda Semple",
-      location: "Google Review",
-      quote: "Reasonable price.",
-      rating: 5,
-    },
-    {
-      name: "Steve Johnson",
-      location: "Google Review",
-      quote: "Five-star Google review.",
       rating: 5,
     },
     {
