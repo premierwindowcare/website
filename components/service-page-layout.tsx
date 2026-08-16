@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { TrustBar } from "@/components/trust-bar"
 import type { ServicePage } from "@/lib/site-pages"
+import { MaintenancePlans } from "@/components/services"
 
 type ServicePageLayoutProps = {
   service: ServicePage
@@ -46,10 +47,15 @@ const exteriorSteps = [
 ] as const
 
 const exteriorSeasons = [
-  ["Spring", "Pollen drives much of the exterior buildup seen in West Michigan. Getting ahead of the heaviest season can make a major difference in how clean your windows stay."],
-  ["Summer", "Dust, pollen, and sprinkler spotting accumulate steadily, especially on south and west facing windows and glass."],
-  ["Fall", "Leaves and storm debris can collect in sills and corners before winter moves in."],
-  ["Winter", "Road salt and slush can build up on the lowest parts of your windows, especially if you live near major roadways."],
+  ["Spring", "Pollen is the primary concern. Fine particles cling to glass, frames, and sills, leaving streaks and a dull film."],
+  ["Summer", "Heat, irrigation, and sprinklers can leave mineral spotting on glass, particularly near lawns and landscaping."],
+  ["Fall", "Drier conditions, yard work, construction activity, and falling debris leave dust and grime around the full window."],
+] as const
+
+const seasonalMaintenanceProcess = [
+  ["Glass cleaning", "We clean the full interior and exterior pane, including the corners and edges where streaks and residue collect."],
+  ["Frames, sills, and tracks", "We detail the parts that quick cleaning often skips, removing the dust, pollen, and grime that can make a window look dirty again quickly."],
+  ["Pure-water rinse finish", "A final rinse with purified water helps prevent mineral deposits and hard-water spotting as the glass dries, for a clearer, longer-lasting finish."],
 ] as const
 
 const interiorIncluded = [
@@ -147,7 +153,7 @@ const commercialIncluded = [
   ["Interior glass cleaning", "Interior service is available alongside exterior cleaning for a clear result on both sides of the glass."],
   ["Frame and sill detailing", "Frames and sills are cleaned so the full window looks finished rather than only the glass."],
   ["Entryway and door glass", "Frequently touched and highly visible entry glass is cleaned as a standard part of the visit."],
-  ["Recurring scheduling", "Weekly, biweekly, monthly, and quarterly plans can be built around the needs of your property."],
+  ["Recurring scheduling", "Weekly, biweekly, monthly, and three-times-yearly plans can be built around the needs of your property."],
   ["Flexible timing", "Visits can be scheduled in the morning, in the evening, or even outside of business hours to avoid disrupting customer traffic."],
 ] as const
 
@@ -313,13 +319,13 @@ export function ServicePageLayout({ service }: ServicePageLayoutProps) {
             <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
               <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Plan around the weather</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Screen Cleaning Through West Michigan’s Seasons</h2><p className="text-lg leading-relaxed text-muted-foreground">The kinds of buildup that appear on screens can vary drastically depending on the time of year.</p></div>
               <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">{screenSeasons.map(([season, body]) => <article key={season} className="rounded-2xl bg-blue-soft p-6"><h3 className="mb-3 text-2xl font-bold text-blue-deep">{season}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}</div>
-              <div className="mt-8 rounded-2xl border border-blue-light/50 border-l-4 border-l-blue-primary bg-gradient-to-r from-blue-soft to-white p-6 shadow-sm md:p-8"><p className="mb-2 text-sm font-bold uppercase tracking-[0.15em] text-blue-primary">A more frequent cleaning schedule</p><h3 className="mb-2 text-xl font-bold text-blue-deep">Add Screen Cleaning to a Quarterly or Biannual Maintenance Plan</h3><p className="text-lg font-medium leading-relaxed text-blue-deep">Screen cleaning is an optional add-on. A recurring schedule can help prevent visible buildup from returning between visits.</p></div>
+              <div className="mt-8 rounded-2xl border border-blue-light/50 border-l-4 border-l-blue-primary bg-gradient-to-r from-blue-soft to-white p-6 shadow-sm md:p-8"><p className="mb-2 text-sm font-bold uppercase tracking-[0.15em] text-blue-primary">A more frequent cleaning schedule</p><h3 className="mb-2 text-xl font-bold text-blue-deep">Add Screen Cleaning to a Seasonal or Biannual Maintenance Plan</h3><p className="text-lg font-medium leading-relaxed text-blue-deep">Screen cleaning is an optional add-on. A recurring schedule can help prevent visible buildup from returning between visits.</p></div>
             </div></div>
           </section>
 
           <section className="bg-blue-soft py-16 md:py-24">
             <div className="container mx-auto px-4"><div className="mx-auto max-w-6xl">
-              <div className="mb-8 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Complete the window</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Add Screen Cleaning to Interior or Exterior Service</h2><p className="text-lg leading-relaxed text-muted-foreground">Screen cleaning complements interior and exterior window washing because the screen sits between the two surfaces. It is an optional add-on for quarterly and biannual maintenance plans, as well as one-time cleanings.</p></div>
+              <div className="mb-8 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Complete the window</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Add Screen Cleaning to Interior or Exterior Service</h2><p className="text-lg leading-relaxed text-muted-foreground">Screen cleaning complements interior and exterior window washing because the screen sits between the two surfaces. It is an optional add-on for Seasonal and Biannual Maintenance plans, as well as one-time cleanings.</p></div>
               <div className="flex flex-col gap-4 sm:flex-row"><Button asChild className="rounded-full bg-blue-primary text-white hover:bg-blue-sky"><Link href="/exterior-window-cleaning">View Exterior Window Cleaning <ArrowRight className="ml-2 h-4 w-4" /></Link></Button><Button asChild variant="outline" className="rounded-full border-blue-primary text-blue-primary hover:bg-white"><Link href="/interior-window-cleaning">View Interior Window Cleaning <ArrowRight className="ml-2 h-4 w-4" /></Link></Button></div>
             </div></div>
           </section>
@@ -535,20 +541,29 @@ export function ServicePageLayout({ service }: ServicePageLayoutProps) {
             </div>
           </section>
 
-          <section className="bg-white py-16 md:py-24">
+          <section id="maintenance-plans" className="scroll-mt-28 bg-white py-16 md:py-24">
+            <div className="container mx-auto px-4">
+              <MaintenancePlans />
+            </div>
+          </section>
+
+          {/* <section className="bg-white py-16 md:py-24">
             <div className="container mx-auto px-4">
               <div className="mx-auto max-w-6xl">
-                <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Plan around the weather</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Exterior Cleaning Through West Michigan’s Seasons</h2><p className="text-lg leading-relaxed text-muted-foreground">The accumulation on your home’s exterior windows isn’t consistent year-round. A professional cleaning schedule that takes the seasons into account prevents excessive buildup from becoming a problem.</p></div>
-                <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+                <div className="mb-10 max-w-3xl"><p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-blue-primary">Maintain, don’t just reset</p><h2 className="mb-4 text-3xl font-bold text-blue-deep md:text-4xl">Three-Service Window Maintenance</h2><p className="text-lg leading-relaxed text-muted-foreground">A one-time cleaning removes what is on your windows today. Seasonal Maintenance is an ongoing system that addresses the seasonal conditions that bring grime back.</p></div>
+                <div className="mb-8 grid gap-5 md:grid-cols-3">
+                  {seasonalMaintenanceProcess.map(([title, body], index) => <article key={title} className="rounded-2xl border border-border bg-blue-soft p-6"><span className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-blue-primary font-bold text-white">{index + 1}</span><h3 className="mb-2 text-xl font-bold text-blue-deep">{title}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}
+                </div>
+                <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
                   {exteriorSeasons.map(([season, body]) => <article key={season} className="rounded-2xl bg-blue-soft p-6"><h3 className="mb-3 text-2xl font-bold text-blue-deep">{season}</h3><p className="leading-relaxed text-foreground">{body}</p></article>)}
                 </div>
                 <div className="mt-8 rounded-2xl border border-blue-light/50 border-l-4 border-l-blue-primary bg-gradient-to-r from-blue-soft to-white p-6 shadow-sm md:p-8">
-                  <p className="mb-2 text-sm font-bold uppercase tracking-[0.15em] text-blue-primary">A smarter cleaning schedule</p>
-                  <p className="text-lg font-medium leading-relaxed text-blue-deep">This pattern is why cleaning your windows on a quarterly or biannual schedule can be smarter than trying to keep up with yearly service. Regular cleaning helps prevent heavier accumulation before it becomes difficult to address.</p>
+                  <p className="mb-2 text-sm font-bold uppercase tracking-[0.15em] text-blue-primary">Why three visits a year</p>
+                  <p className="text-lg font-medium leading-relaxed text-blue-deep">The spring, summer, and fall visits match the changing causes of buildup—pollen, mineral spotting, and dust or debris—rather than following an arbitrary cleaning schedule.</p>
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
           <section className="bg-blue-soft py-16 md:py-24">
             <div className="container mx-auto px-4"><div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">

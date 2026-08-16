@@ -20,9 +20,9 @@ export const servicePages = [
     icon: Armchair,
     image: "/IMG_4360.webp",
     galleryImages: [
-      "/split_portage.png",
-      "/IMG_4387.webp",
+      "/IMG_4404.jpg",
       "/IMG_4360.webp",
+      "/20260715_125346.jpg",
     ],
     benefits: [
       "Removes fingerprints, dust, and everyday buildup",

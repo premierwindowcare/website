@@ -14,7 +14,7 @@ const faqs = [
       "Not usually. Rainwater does not cause most spotting by itself. Spots usually come from dust, pollen, sprinkler minerals, or grime that was already on the glass or surrounding surfaces.",
   },
   {
-    question: "What is the 7 Day Rain Guarantee?",
+    question: "What is the 7-Day Rain Guarantee?",
     answer:
       "If windows cleaned during a scheduled maintenance visit get dirty within 7 days of our cleaning, we’ll clean them again for free. This covers the windows and services included in your original cleaning.",
   },
@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "How often should West Michigan homes schedule window cleaning?",
     answer:
-      "Most homes do well with spring and fall cleanings. Homes near busy roads, sprinklers, trees, construction dust, or lakeshore weather may benefit from quarterly maintenance.",
+      "Most homes do well with spring and fall cleanings. Homes near busy roads, sprinklers, trees, construction dust, or lakeshore weather may benefit from Seasonal Maintenance in spring, summer, and fall.",
   },
   {
     question: "How can I pay after the job is finished?",
