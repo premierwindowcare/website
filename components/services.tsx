@@ -16,8 +16,8 @@ const memberships = [
     cadence: "Single service",
     badge: null,
     benefits: [
-      "No touch-ups between services",
-      "No hard water removal",
+      "No Touch-ups Between Services",
+      "No Hard Water Removal",
       "No 7-Day Rain Guarantee",
     ],
     cta: "Get My Free Quote",
