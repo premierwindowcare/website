@@ -16,8 +16,8 @@ const memberships = [
     cadence: "Single service",
     badge: null,
     benefits: [
-      "No touch-ups between services.",
-      "7-Day Rain Guarantee",
+      "No touch-ups between services",
+      "No 7-Day Rain Guarantee",
       "No hard water removal",
     ],
     cta: "Get My Free Quote",
@@ -33,7 +33,7 @@ const memberships = [
     cadence: "3 scheduled cleanings",
     badge: "BEST VALUE",
     benefits: [
-      "Free touch-ups between visits",
+      "Free touch-ups between services",
       "Hard water removal included",
       "7-Day Rain Guarantee",
       "Full 3-part cleaning",
@@ -51,7 +51,7 @@ const memberships = [
     cadence: "2 scheduled cleanings",
     badge: null,
     benefits: [
-      "Free touch-ups between visits",
+      "Free touch-ups between services",
       "Hard water removal included",
       "7-Day Rain Guarantee",
       "Full 3-part cleaning",
