@@ -24,24 +24,6 @@ const memberships = [
     recommended: false,
   },
   {
-    name: "Seasonal Maintenance",
-    subtitle: 'The "Always Clean" Plan',
-    schedule: "3 visits • Spring • Summer • Fall",
-    description:
-      "For homeowners who want consistently clean windows throughout the year without having to think about scheduling.",
-    savings: "Save $150/year",
-    cadence: "3 scheduled cleanings",
-    badge: "BEST VALUE",
-    benefits: [
-      "Free Touch-ups Between Services",
-      "Free Hard Water Removal",
-      "7-Day Rain Guarantee",
-      "Full 3-Part Cleaning",
-    ],
-    cta: "Choose Seasonal Maintenance",
-    recommended: true,
-  },
-  {
     name: "Biannual Maintenance",
     subtitle: 'The "Stay Ahead" Plan',
     schedule: "2 visits • Spring + Fall",
@@ -58,6 +40,24 @@ const memberships = [
     ],
     cta: "Choose Biannual",
     recommended: false,
+  },
+  {
+    name: "Seasonal Maintenance",
+    subtitle: 'The "Always Clean" Plan',
+    schedule: "3 visits • Spring • Summer • Fall",
+    description:
+      "For homeowners who want consistently clean windows throughout the year without having to think about scheduling.",
+    savings: "Save $150/year",
+    cadence: "3 scheduled cleanings",
+    badge: "BEST VALUE",
+    benefits: [
+      "Free Touch-ups Between Services",
+      "Free Hard Water Removal",
+      "7-Day Rain Guarantee",
+      "Full 3-Part Cleaning",
+    ],
+    cta: "Choose Seasonal Maintenance",
+    recommended: true,
   },
 ];
 
